@@ -1,0 +1,16 @@
+﻿@model List<TeamMaker_WebApp.Models.Team>
+
+<h2>Generated Teams</h2>
+
+@foreach (var team in Model)
+{
+    <div>
+        <h3>@team.TeamName</h3>
+        <ul>
+            @foreach (var player in team.Players)
+            {
+                <li>@player.PlayerName - @player.Position - #@player.Number</li>
+            }
+        </ul>
+    </div>
+}

@@ -1,0 +1,150 @@
+﻿@model List<TeamMaker_WebApp.Models.Player>
+
+<h1 class="title text-center">Welcome To Exodus Official Website</h1>
+
+<!-- Image Slideshow -->
+<div class="container-fluid p-0">
+    <div class="slideshow-container">
+        <div class="slide fade">
+            <img src="~/Images/image1.jpg" class="carousel-img" alt="Image 1">
+        </div>
+        <div class="slide fade">
+            <img src="~/Images/image2.jpg" class="carousel-img" alt="Image 2">
+        </div>
+        <div class="slide fade">
+            <img src="~/Images/image3.jpg" class="carousel-img" alt="Image 3">
+        </div>
+    </div>
+</div>
+
+<!-- Team Generation Section -->
+<div class="container mt-2 p-0">
+    <h2 class="text-center">Select Players & Generate Teams</h2>
+
+    <form id="teamForm" method="post" asp-action="GenerateTeams" asp-controller="Team">
+        <!-- Dropdown to Choose Number of Teams -->
+        <div class="row justify-content-center mb-3">
+            <div class="col-md-4">
+                <label for="teamCount" class="form-label">Select Number of Teams:</label>
+                <select id="teamCount" name="numberOfTeams" class="form-select">
+                    <option value="2" selected>2 Teams</option>
+                    <option value="3">3 Teams</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Player Selection -->
+        <div class="row">
+            @foreach (var player in Model)
+            {
+                <div class="col-md-4 col-sm-6 mb-3">
+                    <button type="button" class="player-btn btn btn-outline-primary w-100 p-3" data-player-id="@player.PlayerId">
+                        <strong>@player.PlayerName</strong> - @player.Position (#@player.Number)
+                    </button>
+                    <input type="hidden" name="selectedPlayerIds[]" value="@player.PlayerId">
+                </div>
+            }
+        </div>
+
+        <!-- Generate Teams Button -->
+        <div class="text-center mt-3">
+            <button type="submit" class="btn btn-success btn-lg">Generate Teams</button>
+        </div>
+    </form>
+</div>
+
+<style>
+    /* Slideshow Styling */
+    .slideshow-container {
+        position: relative;
+        max-width: 100%;
+        overflow: hidden;
+        height: 500px;
+    }
+
+    .carousel-img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .slide {
+        position: absolute;
+        width: 100%;
+        opacity: 0;
+        transform: translateX(100%);
+        transition: opacity 1s ease, transform 1s ease;
+    }
+
+        .slide.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+    /* Player Button Styling */
+    .player-btn {
+        font-size: 1.2rem;
+        transition: all 0.3s ease;
+        border-radius: 10px;
+    }
+
+        .player-btn:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .player-btn.selected {
+            background-color: #28a745 !important;
+            color: white !important;
+        }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let slides = document.querySelectorAll(".slide");
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove("active");
+                if (i === index) {
+                    slide.classList.add("active");
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        }
+
+        showSlide(currentIndex);
+        setInterval(nextSlide, 3000); // Change image every 3 seconds
+
+        // Player Selection Logic
+        const playerButtons = document.querySelectorAll(".player-btn");
+
+        playerButtons.forEach(button => {
+            button.addEventListener("click", function () {
+                button.classList.toggle("selected");
+
+                const hiddenInput = this.nextElementSibling;
+                if (this.classList.contains("selected")) {
+                    hiddenInput.setAttribute("name", "selectedPlayerIds[]");
+                } else {
+                    hiddenInput.removeAttribute("name");
+                }
+            });
+        });
+
+        // Form Submission Validation
+        document.getElementById("teamForm").addEventListener("submit", function (e) {
+            const selectedPlayers = document.querySelectorAll(".player-btn.selected").length;
+            if (selectedPlayers === 0) {
+                alert("Please select at least one player.");
+                e.preventDefault();
+            }
+        });
+    });
+</script>

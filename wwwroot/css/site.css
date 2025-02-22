@@ -1,0 +1,204 @@
+﻿html {
+  font-size: 14px;
+}
+
+
+<!--
+image gallery -->
+.photo-fader img {
+    visibility: hidden;
+}
+
+.photo-fader {
+    background-image: C:\Users\Michah Mithun Saha\source\repos\TeamMaker_WebApp\wwwroot\Images\; background-size: cover;
+    animation: 10s ease-in-out 0s photo-fader infinite;
+}
+
+@keyframes photo-fader {
+    0% {
+        background-image: ;
+    }
+
+    20% {
+        background-image: url(…path to image 2…);
+    }
+
+    40% {
+        background-image: url(…path to image 3…);
+    }
+
+    60% {
+        background-image: url(…path to image 4…);
+    }
+
+    80% {
+        background-image: url(…path to image 5…);
+    }
+
+    100% {
+        background-image: url(…path to image 1…);
+    }
+}
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+.title {
+    margin-top: 20px; /* Adjust the value as needed */
+}
+
+#carouselExampleIndicators {
+    width: 100vw;
+    height: 100vh;
+}
+.carousel-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    padding: 5%; /* Add 5% padding */
+}
+
+.carousel-img {
+    width: 90%; /* Make the image 90% of its container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Show full image without cropping */
+    border-radius: 15px; /* Optional: adds rounded corners for better look */
+}
+html {
+  position: relative;
+  min-height: 100%;
+}
+.photo-fader img {
+    visibility: hidden;
+}
+
+.photo-fader {
+    background-image: url(…path to your image…);
+    background-size: cover;
+    animation: 10s ease-in-out 0s photo-fader infinite;
+}
+
+@keyframes photo-fader {
+    0% {
+        
+        background-image: url('../images/image1.jpg');
+    }
+
+    20% {
+        background-image: url('../images/image2.jpg');
+    }
+
+    40% {
+        background-image: url('../images/image3.jpg');
+    }
+
+    60% {
+        background-image: url(…path to image 4…);
+    }
+
+    80% {
+        background-image: url(…path to image 5…);
+    }
+
+    100% {
+        background-image: url(…path to image 1…);
+    }
+}
+body {
+  margin-bottom: 60px;
+}
+.portfolio-thumb {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-thumb:hover {
+    transform: scale(1.05);
+}
+    .portfolio-thumb img {
+        width: 100%; /* Makes the image responsive */
+        height: auto; /* Maintains aspect ratio */
+        object-fit: contain; /* Prevents cropping */
+        display: block;
+    }
+
+/* Ensure portfolio section has enough space */
+.portfolio-thumb {
+    position: relative;
+    overflow: hidden; /* Prevents overflow */
+    border-radius: 10px;
+}
+
+.portfolio-info {
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+/* 🌑 Global Dark Background */
+body {
+    background-color: black !important;
+    color: white !important;
+}
+
+/* ✨ Glowing Text */
+h1, h2, h3, h4, h5, h6, p, a, span {
+    text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8);
+    color: white;
+}
+
+/* 🎨 Navbar Styling */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    border-bottom: 2px solid white;
+}
+
+    .navbar .nav-link, .navbar-brand {
+        color: white !important;
+        transition: 0.3s;
+    }
+
+        .navbar .nav-link:hover {
+            text-shadow: 0px 0px 12px rgba(0, 255, 255, 0.9);
+        }
+
+/* 🖼 Portfolio Image Glow Effect */
+.portfolio-thumb {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+    .portfolio-thumb:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+    }
+
+/* 🔥 Image Hover Glow */
+.portfolio-image {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: filter 0.3s;
+}
+
+.portfolio-thumb:hover .portfolio-image {
+    filter: brightness(1.3);
+}
+
+/* ✨ Footer Glow */
+.footer {
+    background-color: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    padding: 10px;
+    color: white;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+}

@@ -1,0 +1,54 @@
+﻿@model List<TeamMaker_WebApp.Models.Team>
+
+@{
+    int teamCount = ViewBag.NumberOfTeams ?? Model.Count; // Get number of teams from ViewBag
+}
+
+<style>
+    .shadow-green {
+        box-shadow: 0 0 15px rgba(40, 167, 69, 0.8) !important;
+        border: 2px solid #28a745 !important;
+    }
+
+    .shadow-red {
+        box-shadow: 0 0 15px rgba(220, 53, 69, 0.8) !important;
+        border: 2px solid #dc3545 !important;
+    }
+</style>
+
+<div class="container mt-3">
+    <h2 class="text-center mb-3">Generated Teams</h2>
+
+    <div id="teamsContainer" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+        @for (int i = 0; i < teamCount; i++)
+        {
+            string teamClass = (i % 2 == 0) ? "shadow-green" : "shadow-red";
+            <div class="col">
+                <div class="card p-3 mb-3 @teamClass" id="team@(i+1)Card">
+                    <div class="card-body">
+                        <h4 class="card-title text-center">Team @(i + 1)</h4>
+                        <ul class="list-group list-group-flush" id="team@(i+1)List">
+                            @foreach (var player in Model[i].Players)
+                            {
+                                <li class="list-group-item">@player.PlayerName - @player.Position (#@player.Number)</li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <div class="text-center mt-3">
+        <button id="shuffleTeamsBtn" class="btn btn-primary">Shuffle Teams</button>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#shuffleTeamsBtn").click(function () {
+            location.reload(); // Reloads the page to regenerate teams
+        });
+    });
+</script>

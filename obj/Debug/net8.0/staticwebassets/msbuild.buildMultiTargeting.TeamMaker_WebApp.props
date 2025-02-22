@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\TeamMaker_WebApp.props" />
+</Project>

@@ -1,0 +1,30 @@
+﻿@model List<TeamMaker_WebApp.Models.Player>
+
+<h2>Player List</h2>
+<a asp-action="Create" class="btn btn-primary">Add New Player</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Number</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var player in Model)
+        {
+            <tr>
+                <td>@player.PlayerName</td>
+                <td>@player.Position</td>
+                <td>@player.Number</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@player.PlayerId" class="btn btn-warning">Edit</a>
+                    <a asp-action="Details" asp-route-id="@player.PlayerId" class="btn btn-info">Details</a>
+                    <a asp-action="Delete" asp-route-id="@player.PlayerId" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
