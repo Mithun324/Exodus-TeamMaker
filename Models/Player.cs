@@ -7,7 +7,7 @@ namespace TeamMaker_WebApp.Models
         [Key]
         public int PlayerId { get; set; }
 
-        [Required]
+     
         public string PlayerName { get; set; }
 
         [Required]

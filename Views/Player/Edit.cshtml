@@ -1,0 +1,34 @@
+﻿@model TeamMaker_WebApp.Models.Player
+
+<h2>Edit Player</h2>
+
+<form asp-controller="Player" asp-action="Edit" method="post">
+    <input type="hidden" asp-for="PlayerId" />
+
+    <div class="form-group">
+        <label for="PlayerName">Player Name</label>
+        <input type="text" id="PlayerName" name="PlayerName" class="form-control" value="@Model.PlayerName" required />
+    </div>
+
+    <div class="form-group">
+        <label for="Position">Position</label>
+        <select id="Position" name="Position" class="form-control">
+            <option value="Goalkeeper" selected="@(Model.Position == "Goalkeeper" ? "selected" : null)">Goalkeeper</option>
+            <option value="Defender" selected="@(Model.Position == "Defender" ? "selected" : null)">Defender</option>
+            <option value="Midfielder" selected="@(Model.Position == "Midfielder" ? "selected" : null)">Midfielder</option>
+            <option value="Forward" selected="@(Model.Position == "Forward" ? "selected" : null)">Forward</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="Number">Jersey Number</label>
+        <input type="number" id="Number" name="Number" class="form-control" value="@Model.Number" min="1" max="99" required />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

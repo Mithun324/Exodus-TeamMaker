@@ -170,3 +170,4 @@ C:\Users\Michah Mithun Saha\source\repos\TeamMaker_WebApp\obj\Debug\net8.0\refin
 C:\Users\Michah Mithun Saha\source\repos\TeamMaker_WebApp\obj\Debug\net8.0\TeamMaker_WebApp.pdb
 C:\Users\Michah Mithun Saha\source\repos\TeamMaker_WebApp\obj\Debug\net8.0\TeamMaker_WebApp.genruntimeconfig.cache
 C:\Users\Michah Mithun Saha\source\repos\TeamMaker_WebApp\obj\Debug\net8.0\ref\TeamMaker_WebApp.dll
+C:\Users\Michah Mithun Saha\source\repos\TeamMaker_WebApp\obj\Debug\net8.0\TeamMaker_WebApp.sourcelink.json
