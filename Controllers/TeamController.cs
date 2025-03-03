@@ -28,13 +28,17 @@ namespace TeamMaker_WebApp.Controllers
         {
             if (selectedPlayerIds == null || selectedPlayerIds.Count == 0)
             {
-                return RedirectToAction("Index", "Home"); // Redirect back if no players selected
+                TempData["ErrorMessage"] = "Please select at least one player.";
+                return RedirectToAction("Index", "Home");
             }
 
             var players = _context.Players.Where(p => selectedPlayerIds.Contains(p.PlayerId)).ToList();
 
-            // Ensure the number of teams does not exceed the number of players
-            numberOfTeams = Math.Min(numberOfTeams, Math.Max(2, players.Count));
+            if (players.Count < numberOfTeams)
+            {
+                TempData["ErrorMessage"] = "Not enough players to form the requested number of teams.";
+                return RedirectToAction("Index", "Home");
+            }
 
             // Shuffle players randomly
             var random = new Random();
@@ -51,13 +55,22 @@ namespace TeamMaker_WebApp.Controllers
                 teams[i % numberOfTeams].Players.Add(shuffledPlayers[i]);
             }
 
-            ViewBag.NumberOfTeams = numberOfTeams; // Pass selected team count to the view
-            return View("GeneratedTeams", teams);
+            // Save generated teams to the database
+            _context.Teams.AddRange(teams);
+            _context.SaveChanges();
+
+            ViewBag.NumberOfTeams = numberOfTeams;
+            return RedirectToAction("GeneratedTeams");
         }
 
         public IActionResult GeneratedTeams()
         {
-            return View();
+            var teams = _context.Teams
+                                .Include(t => t.Players)
+                                .OrderByDescending(t => t.TeamId)
+                                .ToList();
+
+            return View(teams);
         }
     }
 }

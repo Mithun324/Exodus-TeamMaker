@@ -41,10 +41,12 @@
                     <button type="button" class="player-btn btn btn-outline-primary w-100 p-3" data-player-id="@player.PlayerId">
                         <strong>@player.PlayerName</strong> - @player.Position (#@player.Number)
                     </button>
-                    <input type="hidden" name="selectedPlayerIds[]" value="@player.PlayerId">
                 </div>
             }
         </div>
+
+        <!-- Hidden Inputs for Selected Players -->
+        <div id="selectedPlayers"></div>
 
         <!-- Generate Teams Button -->
         <div class="text-center mt-3">
@@ -124,16 +126,25 @@
 
         // Player Selection Logic
         const playerButtons = document.querySelectorAll(".player-btn");
+        const selectedPlayersContainer = document.getElementById("selectedPlayers");
 
         playerButtons.forEach(button => {
             button.addEventListener("click", function () {
                 button.classList.toggle("selected");
 
-                const hiddenInput = this.nextElementSibling;
+                const playerId = this.getAttribute("data-player-id");
+                const existingInput = selectedPlayersContainer.querySelector(`input[value='${playerId}']`);
+
                 if (this.classList.contains("selected")) {
-                    hiddenInput.setAttribute("name", "selectedPlayerIds[]");
+                    const input = document.createElement("input");
+                    input.type = "hidden";
+                    input.name = "selectedPlayerIds[]";
+                    input.value = playerId;
+                    selectedPlayersContainer.appendChild(input);
                 } else {
-                    hiddenInput.removeAttribute("name");
+                    if (existingInput) {
+                        existingInput.remove();
+                    }
                 }
             });
         });
