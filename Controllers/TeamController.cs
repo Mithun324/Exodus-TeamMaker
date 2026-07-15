@@ -1,8 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using TeamMaker_WebApp.Data;
 using TeamMaker_WebApp.Models;
 
@@ -19,8 +16,11 @@ namespace TeamMaker_WebApp.Controllers
 
         public IActionResult Index()
         {
-            var teams = _context.Teams.Include(t => t.Players).ToList();
-            return View("Team"); // Ensure it loads Team.cshtml
+            var teams = _context.Teams
+                                .Include(t => t.Players)
+                                .ToList();
+
+            return View(teams);
         }
 
         [HttpPost]
@@ -32,42 +32,101 @@ namespace TeamMaker_WebApp.Controllers
                 return RedirectToAction("Index", "Home");
             }
 
-            var players = _context.Players.Where(p => selectedPlayerIds.Contains(p.PlayerId)).ToList();
-
-            if (players.Count < numberOfTeams)
+            if (numberOfTeams <= 0)
             {
-                TempData["ErrorMessage"] = "Not enough players to form the requested number of teams.";
+                TempData["ErrorMessage"] = "Invalid number of teams.";
                 return RedirectToAction("Index", "Home");
             }
 
-            // Shuffle players randomly
-            var random = new Random();
-            var shuffledPlayers = players.OrderBy(p => random.Next()).ToList();
-            var teams = new List<Team>();
+            // ==========================================
+            // Remove previous team assignments
+            // ==========================================
+
+            var allPlayers = _context.Players.ToList();
+
+            foreach (var player in allPlayers)
+            {
+                player.TeamId = null;
+            }
+
+            _context.SaveChanges();
+
+            // ==========================================
+            // Delete previous teams
+            // ==========================================
+
+            var oldTeams = _context.Teams.ToList();
+
+            if (oldTeams.Any())
+            {
+                _context.Teams.RemoveRange(oldTeams);
+                _context.SaveChanges();
+            }
+
+            // ==========================================
+            // Get selected players
+            // ==========================================
+
+            var players = _context.Players
+                                  .Where(p => selectedPlayerIds.Contains(p.PlayerId))
+                                  .ToList();
+
+            if (players.Count < numberOfTeams)
+            {
+                TempData["ErrorMessage"] = "Not enough players to create the selected number of teams.";
+                return RedirectToAction("Index", "Home");
+            }
+
+            // ==========================================
+            // Shuffle players
+            // ==========================================
+
+            Random random = new Random();
+
+            players = players
+                .OrderBy(x => random.Next())
+                .ToList();
+
+            // ==========================================
+            // Create teams
+            // ==========================================
+
+            List<Team> teams = new();
 
             for (int i = 0; i < numberOfTeams; i++)
             {
-                teams.Add(new Team { TeamName = $"Team {i + 1}", Players = new List<Player>() });
+                teams.Add(new Team
+                {
+                    TeamName = $"Team {i + 1}",
+                    Players = new List<Player>()
+                });
             }
 
-            for (int i = 0; i < shuffledPlayers.Count; i++)
+            // ==========================================
+            // Distribute players evenly
+            // ==========================================
+
+            for (int i = 0; i < players.Count; i++)
             {
-                teams[i % numberOfTeams].Players.Add(shuffledPlayers[i]);
+                teams[i % numberOfTeams].Players.Add(players[i]);
             }
 
-            // Save generated teams to the database
+            // ==========================================
+            // Save new teams
+            // ==========================================
+
             _context.Teams.AddRange(teams);
             _context.SaveChanges();
 
-            ViewBag.NumberOfTeams = numberOfTeams;
-            return RedirectToAction("GeneratedTeams");
+            return RedirectToAction(nameof(GeneratedTeams));
         }
 
+       
         public IActionResult GeneratedTeams()
         {
             var teams = _context.Teams
                                 .Include(t => t.Players)
-                                .OrderByDescending(t => t.TeamId)
+                                .OrderBy(t => t.TeamId)
                                 .ToList();
 
             return View(teams);

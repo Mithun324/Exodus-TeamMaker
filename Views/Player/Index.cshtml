@@ -1,31 +1,114 @@
 ﻿@model List<TeamMaker_WebApp.Models.Player>
 
-<h2>Player List</h2>
-<a asp-action="Create" class="btn btn-primary">Add New Player</a>
+@{
+    ViewData["Title"] = "Player List";
+}
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Position</th>
-            <th>Number</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var player in Model)
-        {
-            <tr>
-                <td>@player.PlayerName</td>
-                <td>@player.Position</td>
-                <td>@player.Number</td>
-                <td>
-                    <a asp-controller="Player" asp-action="Edit" asp-route-id="@player.PlayerId" class="btn btn-warning">Edit</a>
-                    <a asp-controller="Player" asp-action="Details" asp-route-id="@player.PlayerId" class="btn btn-info">Details</a>
-                    <a asp-controller="Player" asp-action="Delete" asp-route-id="@player.PlayerId" class="btn btn-danger">Delete</a>
+<link rel="stylesheet" href="~/css/player-list.css" />
 
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+<div class="tm-page">
+    <div class="tm-header">
+        <div class="tm-title-group">
+            <div class="tm-eyebrow">Squad management</div>
+            <h1 class="tm-title">
+                Player List
+                <span class="tm-count-badge">
+                    <i class="bi bi-people-fill"></i> @Model.Count
+                </span>
+            </h1>
+        </div>
+        <a asp-action="Create" class="tm-add-btn">
+            <i class="bi bi-plus-lg"></i> Add new player
+        </a>
+    </div>
+
+    @{
+    var current = ViewBag.CurrentPosition as string ?? "All";
+}
+
+<div class="tm-filters">
+    <a href="@Url.Action("Index")"
+       class="tm-filter-btn @(current == "All" ? "active" : "")">All</a>
+
+    <a href="@Url.Action("Index", new { position = "Forward" })"
+       class="tm-filter-btn @(current == "Forward" ? "active" : "")">Forwards</a>
+
+    <a href="@Url.Action("Index", new { position = "Midfielder" })"
+       class="tm-filter-btn @(current == "Midfielder" ? "active" : "")">Midfielders</a>
+
+    <a href="@Url.Action("Index", new { position = "Defender" })"
+       class="tm-filter-btn @(current == "Defender" ? "active" : "")">Defenders</a>
+
+    <a href="@Url.Action("Index", new { position = "Goalkeeper" })"
+       class="tm-filter-btn @(current == "Goalkeeper" ? "active" : "")">Goalkeepers</a>
+</div>
+
+<span class="tm-count-badge">
+    <i class="bi bi-people-fill"></i> @Model.Count
+</span>
+
+    <div class="tm-table-wrap">
+        <table class="tm-table">
+            <thead>
+                <tr>
+                    <th>Player</th>
+                    <th>Position</th>
+                    <th>No.</th>
+                    <th class="text-end">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var player in Model)
+                {
+                    var initials = string.Concat(player.PlayerName.Split(' ')
+                                    .Take(2).Select(w => w[0])).ToUpper();
+                    var posClass = player.Position?.ToLower() switch {
+                        "forward"    => "pos-forward",
+                        "midfielder" => "pos-midfielder",
+                        "defender"   => "pos-defender",
+                        "goalkeeper" => "pos-goalkeeper",
+                        _ => "pos-default"
+                    };
+                  var isSpecialNum = player.Number is 10 or 11 ;
+
+                    <tr>
+                        <td>
+                           <div class="player-cell">
+                                <img src="@(string.IsNullOrEmpty(player.ImagePath) ? "/Images/Players/default.png" : player.ImagePath)"
+                                     class="player-thumb" alt="@player.PlayerName" />
+                                <span class="player-name">@player.PlayerName</span>
+                            </div>
+
+                 </td>
+                        <td>
+                            <span class="pos-badge @posClass">@player.Position</span>
+                        </td>
+                        <td>
+                         <span class="num-badge @(isSpecialNum ? "special" : "")">
+                                @player.Number
+                            </span>
+                        </td>
+                        <td class="action-cell">
+                            <a asp-controller="Player" asp-action="Edit"
+                               asp-route-id="@player.PlayerId" class="btn-action btn-edit">
+                                <i class="bi bi-pencil"></i> Edit
+                            </a>
+                            <a asp-controller="Player" asp-action="Details"
+                               asp-route-id="@player.PlayerId" class="btn-action btn-details">
+                                Details
+                            </a>
+                            <a asp-controller="Player" asp-action="Delete"
+                               asp-route-id="@player.PlayerId" class="btn-action btn-delete">
+                                <i class="bi bi-trash"></i> Delete
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="tm-footer">
+        <span class="tm-count">Showing @Model.Count players</span>
+    </div>
+</div>

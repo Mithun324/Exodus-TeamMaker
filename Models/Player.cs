@@ -4,10 +4,9 @@ namespace TeamMaker_WebApp.Models
 {
     public class Player
     {
-        [Key]
         public int PlayerId { get; set; }
 
-     
+        [Required]
         public string PlayerName { get; set; }
 
         [Required]
@@ -15,5 +14,10 @@ namespace TeamMaker_WebApp.Models
 
         [Required]
         public int Number { get; set; }
+
+        public string? ImagePath { get; set; }
+
+        public int? TeamId { get; set; }
+        public Team? Team { get; set; }
     }
 }

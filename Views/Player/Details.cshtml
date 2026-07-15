@@ -1,8 +1,91 @@
 ﻿@model TeamMaker_WebApp.Models.Player
 
-<h2>Player Details</h2>
-<p><strong>Player Name:</strong> @Model.PlayerName</p>
-<p><strong>Position:</strong> @Model.Position</p>
-<p><strong>Jersey Number:</strong> @Model.Number</p>
+@{
+    ViewData["Title"] = "Player Details";
 
-<a asp-action="Index" class="btn btn-secondary">Back to List</a>
+    var imagePath = string.IsNullOrEmpty(Model.ImagePath)
+        ? Url.Content("~/Images/Players/default.webp")
+        : Url.Content(Model.ImagePath);
+}
+
+<div class="container mt-5">
+
+    <div class="card shadow-lg border-0 rounded-4">
+
+        <div class="card-header bg-primary text-white">
+            <h3 class="mb-0">
+                <i class="bi bi-person-circle"></i>
+                Player Details
+            </h3>
+        </div>
+
+        <div class="card-body">
+
+            <div class="row">
+
+                <!-- Player Image -->
+                <div class="col-md-4 text-center">
+
+                    <img src="@imagePath"
+                         class="img-fluid rounded-circle border shadow"
+                         style="width:220px;height:220px;object-fit:cover;"
+                         alt="@Model.PlayerName" />
+
+                </div>
+
+                <!-- Player Information -->
+                <div class="col-md-8">
+
+                    <table class="table table-borderless">
+
+                        <tr>
+                            <th width="180">Player Name</th>
+                            <td>@Model.PlayerName</td>
+                        </tr>
+
+                        <tr>
+                            <th>Position</th>
+                            <td>
+                                <span class="badge bg-success fs-6">
+                                    @Model.Position
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th>Jersey Number</th>
+                            <td>
+                                <span class="badge bg-dark fs-6">
+                                    #@Model.Number
+                                </span>
+                            </td>
+                        </tr>
+
+                    </table>
+
+                    <div class="mt-4">
+
+                        <a asp-action="Edit"
+                           asp-route-id="@Model.PlayerId"
+                           class="btn btn-warning me-2">
+                            <i class="bi bi-pencil-square"></i>
+                            Edit
+                        </a>
+
+                        <a asp-action="Index"
+                           class="btn btn-secondary">
+                            <i class="bi bi-arrow-left"></i>
+                            Back to List
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

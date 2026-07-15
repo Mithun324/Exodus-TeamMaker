@@ -1,0 +1,422 @@
+﻿/* ── Layout ─────────────────────────────────── */
+.tm-page {
+    padding: 1.5rem 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.tm-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* ── Page title ─────────────────────────────── */
+.tm-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: #6B7280;
+    margin-bottom: 4px;
+}
+
+.tm-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.tm-count-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: #EFF6FF;
+    color: #1D4ED8;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+/* ── Add button ─────────────────────────────── */
+.tm-add-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: #2563EB;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 9px 18px;
+    border-radius: 8px;
+    border: none;
+    text-decoration: none;
+    transition: opacity .15s;
+    cursor: pointer;
+}
+
+    .tm-add-btn:hover {
+        opacity: .88;
+        color: #fff;
+        text-decoration: none;
+    }
+
+/* ── Position filter pills ───────────────────── */
+.tm-filters {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.tm-filter-btn {
+    font-size: 12px;
+    font-weight: 500;
+    padding: 5px 14px;
+    border-radius: 20px;
+    border: 1px solid #D1D5DB;
+    background: #F9FAFB;
+    color: #374151;
+    text-decoration: none;
+    transition: all .15s;
+}
+
+    .tm-filter-btn:hover {
+        background: #F3F4F6;
+        text-decoration: none;
+        color: #111827;
+    }
+
+    .tm-filter-btn.active {
+        background: #EFF6FF;
+        color: #1D4ED8;
+        border-color: #BFDBFE;
+    }
+
+/* ── Table container ─────────────────────────── */
+.tm-table-wrap {
+    background: #fff;
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.tm-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+    /* ── Table head ─────────────────────────────── */
+    .tm-table thead tr {
+        border-bottom: 1px solid #F3F4F6;
+    }
+
+    .tm-table th {
+        padding: 10px 16px;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: .07em;
+        text-transform: uppercase;
+        color: #9CA3AF;
+        text-align: left;
+    }
+
+        .tm-table th:nth-child(1) {
+            width: 38%;
+        }
+
+        .tm-table th:nth-child(2) {
+            width: 22%;
+        }
+
+        .tm-table th:nth-child(3) {
+            width: 15%;
+        }
+
+        .tm-table th:nth-child(4) {
+            width: 25%;
+            text-align: right;
+        }
+
+    /* ── Table rows ─────────────────────────────── */
+    .tm-table tbody tr {
+        border-bottom: 1px solid #F3F4F6;
+        transition: background .1s;
+    }
+
+        .tm-table tbody tr:last-child {
+            border-bottom: none;
+        }
+
+        .tm-table tbody tr:hover {
+            background: #F9FAFB;
+        }
+
+    .tm-table td {
+        padding: 12px 16px;
+        font-size: 13px;
+        color: #111827;
+        vertical-align: middle;
+    }
+
+/* ── Player cell (avatar + name) ─────────────── */
+.player-cell {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.player-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #EFF6FF;
+    color: #1D4ED8;
+    font-size: 11px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.player-name {
+    font-weight: 500;
+    color: #111827;
+}
+
+/* ── Position badges ─────────────────────────── */
+.pos-badge {
+    display: inline-flex;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+.pos-forward {
+    background: #FEF3C7;
+    color: #92400E;
+}
+
+.pos-midfielder {
+    background: #EDE9FE;
+    color: #5B21B6;
+}
+
+.pos-defender {
+    background: #D1FAE5;
+    color: #065F46;
+}
+
+.pos-goalkeeper {
+    background: #FEE2E2;
+    color: #991B1B;
+}
+
+.pos-default {
+    background: #F3F4F6;
+    color: #374151;
+}
+
+/* ── Jersey number badge ─────────────────────── */
+.num-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    background: #F9FAFB;
+    border: 1px solid #E5E7EB;
+    font-size: 13px;
+    font-weight: 700;
+    color: #374151;
+}
+
+    .num-badge.special {
+        background: #EFF6FF;
+        border-color: #BFDBFE;
+        color: #1D4ED8;
+    }
+
+/* ── Action buttons ─────────────────────────── */
+.action-cell {
+    display: flex;
+    gap: 6px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.btn-action {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 5px 11px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: opacity .12s;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+    .btn-action:hover {
+        opacity: .75;
+        text-decoration: none;
+    }
+
+.btn-edit {
+    border: 1px solid #BFDBFE;
+    background: #EFF6FF;
+    color: #1D4ED8;
+}
+
+.btn-details {
+    border: 1px solid #E5E7EB;
+    background: #F9FAFB;
+    color: #374151;
+}
+
+.btn-delete {
+    border: 1px solid #FECACA;
+    background: #FEF2F2;
+    color: #DC2626;
+}
+
+/* ── Footer ─────────────────────────────────── */
+.tm-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tm-count {
+    font-size: 12px;
+    color: #9CA3AF;
+}
+
+/* ── Dark mode ───────────────────────────────── */
+@media (prefers-color-scheme: dark) {
+    .tm-eyebrow, .tm-count {
+        color: #9CA3AF;
+    }
+
+    .tm-title, .player-name {
+        color: #F9FAFB;
+    }
+
+    .tm-table-wrap {
+        background: #1F2937;
+        border-color: #374151;
+    }
+
+    .tm-table thead tr,
+    .tm-table tbody tr {
+        border-color: #374151;
+    }
+
+        .tm-table tbody tr:hover {
+            background: #111827;
+        }
+
+    .tm-table td {
+        color: #F9FAFB;
+    }
+
+    .tm-table th {
+        color: #6B7280;
+    }
+
+    .player-avatar {
+        background: #1E3A5F;
+        color: #93C5FD;
+    }
+
+    .num-badge {
+        background: #111827;
+        border-color: #374151;
+        color: #D1D5DB;
+    }
+
+        .num-badge.special {
+            background: #1E3A5F;
+            border-color: #1D4ED8;
+            color: #93C5FD;
+        }
+
+    .tm-filter-btn {
+        background: #1F2937;
+        border-color: #374151;
+        color: #D1D5DB;
+    }
+
+        .tm-filter-btn.active {
+            background: #1E3A5F;
+            color: #93C5FD;
+            border-color: #1D4ED8;
+        }
+
+    .btn-details {
+        background: #1F2937;
+        border-color: #374151;
+        color: #D1D5DB;
+    }
+
+    .btn-edit {
+        background: #1E3A5F;
+        border-color: #1D4ED8;
+        color: #93C5FD;
+    }
+
+    .btn-delete {
+        background: #450A0A;
+        border-color: #7F1D1D;
+        color: #FCA5A5;
+    }
+
+    .tm-count-badge {
+        background: #1E3A5F;
+        color: #93C5FD;
+    }
+}
+
+.alert-error {
+    background: #FEF2F2;
+    border: 1px solid #FECACA;
+    color: #DC2626;
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin-bottom: 1rem;
+    font-size: 13px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.player-select-row {
+    cursor: pointer;
+}
+
+    .player-select-row:hover {
+        background: #F9FAFB;
+    }
+
+.player-thumb {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #E5E7EB;
+    flex-shrink: 0;
+}

@@ -10,40 +10,45 @@ image gallery -->
 }
 
 .photo-fader {
-    background-image: C:\Users\Michah Mithun Saha\source\repos\TeamMaker_WebApp\wwwroot\Images\; background-size: cover;
+    background-image: url('../images/portfolio/portfolio1.jpg');
+    background-image: url('../images/portfolio/portfolio2.png');
+    background-image: url('../images/portfolio/portfolio3.png');
+    background-image: url('../images/portfolio/portfolio4.png');
+    background-size: cover;
     animation: 10s ease-in-out 0s photo-fader infinite;
 }
 
 @keyframes photo-fader {
     0% {
-        background-image: ;
+ 
+        background-image: url('../images/portfolio/portfolio1.jpg');
     }
 
     20% {
-        background-image: url(…path to image 2…);
+        background-image: url('../images/portfolio/portfolio2.png');
     }
 
     40% {
-        background-image: url(…path to image 3…);
+        background-image: url('../images/portfolio/portfolio3.png');
     }
 
     60% {
-        background-image: url(…path to image 4…);
+        background-image: url('../images/portfolio/portfolio4.png');
     }
 
     80% {
-        background-image: url(…path to image 5…);
+        background-image: url('../images/portfolio/portfolio1.png');
     }
 
     100% {
-        background-image: url(…path to image 1…);
+        background-image: url('../images/portfolio/portfolio2.png');
     }
 }
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
     box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 .title {
-    margin-top: 20px; /* Adjust the value as needed */
+    margin-top: 20px; 
 }
 
 #carouselExampleIndicators {
@@ -52,17 +57,17 @@ image gallery -->
 }
 .carousel-container {
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 100vh; /* Full viewport height */
-    padding: 5%; /* Add 5% padding */
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh;
+    padding: 5%; 
 }
 
 .carousel-img {
-    width: 90%; /* Make the image 90% of its container */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Show full image without cropping */
-    border-radius: 15px; /* Optional: adds rounded corners for better look */
+    width: 90%; 
+    height: auto; 
+    object-fit: contain;
+    border-radius: 15px; 
 }
 html {
   position: relative;
@@ -81,31 +86,32 @@ html {
 @keyframes photo-fader {
     0% {
         
-        background-image: url('../images/image1.jpg');
+        background-image: url('../Images/Portfolio/IMG1.webp');
     }
 
     20% {
-        background-image: url('../images/image2.jpg');
+        background-image: url('../Images/Portfolio/IMG2.webp');
     }
 
     40% {
-        background-image: url('../images/image3.jpg');
+        background-image: url('../Images/Portfolio/IMG3.webp');
     }
 
     60% {
-        background-image: url(…path to image 4…);
+        background-image: url('../Images/Portfolio/IMG4.webp');
+       
     }
 
     80% {
-        background-image: url(…path to image 5…);
+        background-image: url('../Images/Portfolio/IMG1.webp');
     }
 
     100% {
-        background-image: url(…path to image 1…);
+        background-image: url('../Images/Portfolio/IMG2.webp');
     }
 }
 body {
-  margin-bottom: 60px;
+  
 }
 .portfolio-thumb {
     position: relative;
@@ -119,16 +125,15 @@ body {
     transform: scale(1.05);
 }
     .portfolio-thumb img {
-        width: 100%; /* Makes the image responsive */
-        height: auto; /* Maintains aspect ratio */
-        object-fit: contain; /* Prevents cropping */
+        width: 100%; 
+        height: auto; 
+        object-fit: contain; 
         display: block;
     }
 
-/* Ensure portfolio section has enough space */
 .portfolio-thumb {
     position: relative;
-    overflow: hidden; /* Prevents overflow */
+    overflow: hidden;
     border-radius: 10px;
 }
 
@@ -141,34 +146,93 @@ body {
     width: 100%;
     text-align: center;
 }
-/* 🌑 Global Dark Background */
+
 body {
     background-color: black !important;
     color: white !important;
 }
 
-/* ✨ Glowing Text */
+
 h1, h2, h3, h4, h5, h6, p, a, span {
     text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8);
     color: white;
 }
 
-/* 🎨 Navbar Styling */
+
 .navbar {
-    background-color: rgba(0, 0, 0, 0.8) !important;
-    border-bottom: 2px solid white;
+    background: rgba(10, 10, 20, 0.55) !important;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
 }
 
-    .navbar .nav-link, .navbar-brand {
-        color: white !important;
-        transition: 0.3s;
+    /* Force nav items to the RIGHT side */
+    .navbar .navbar-collapse {
+        justify-content: flex-end; /* Bootstrap 5 flexbox way */
+    }
+    /* OR using margin auto */
+    .navbar .navbar-nav {
+        margin-left: auto; /* Classic Bootstrap 4 way, works on 5 too */
     }
 
-        .navbar .nav-link:hover {
-            text-shadow: 0px 0px 12px rgba(0, 255, 255, 0.9);
+    /* ── Brand ── */
+    .navbar .navbar-brand {
+        color: #ffffff !important;
+        font-weight: 700;
+        font-size: 1.4rem;
+        letter-spacing: -0.02em;
+    }
+
+        .navbar .navbar-brand:hover {
+            opacity: 0.85;
         }
 
-/* 🖼 Portfolio Image Glow Effect */
+    /* ── Nav Links ── */
+    .navbar .nav-link {
+        color: rgba(255, 255, 255, 0.75) !important;
+        font-weight: 500;
+        letter-spacing: 0.03em;
+        padding: 0.5rem 0.75rem !important;
+        margin: 0 0.25rem;
+        position: relative;
+        transition: color 0.3s ease, transform 0.2s ease;
+        /* Explicitly remove any GLOW effect */
+        text-shadow: none !important;
+    }
+
+        /* Premium sliding underline (NO glow) */
+        .navbar .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: #ffffff; /* Pure white, no gradient glow */
+            border-radius: 4px;
+            transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transform: translateX(-50%);
+        }
+
+        .navbar .nav-link:hover {
+            color: #ffffff !important;
+            transform: translateY(-1px);
+            text-shadow: none !important; /* Double safety */
+        }
+
+            .navbar .nav-link:hover::after {
+                width: 80%;
+            }
+
+        .navbar .nav-link.active {
+            color: #ffffff !important;
+        }
+
+            .navbar .nav-link.active::after {
+                width: 80%;
+            }
+
 .portfolio-thumb {
     position: relative;
     overflow: hidden;
@@ -202,3 +266,75 @@ h1, h2, h3, h4, h5, h6, p, a, span {
     color: white;
     text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
 }
+
+
+
+/*  Footer Partial  */
+
+.footer {
+    background: #111827;
+    color: white;
+    padding: 70px 0 20px;
+  
+}
+
+    .footer h4,
+    .footer h5 {
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+
+    .footer p {
+        color: #D1D5DB;
+        line-height: 1.8;
+    }
+
+.footer-links {
+    padding: 0;
+    list-style: none;
+}
+
+    .footer-links li {
+        margin-bottom: 12px;
+    }
+
+    .footer-links a {
+        text-decoration: none;
+        color: #D1D5DB;
+        transition: .3s;
+    }
+
+        .footer-links a:hover {
+            color: #3B82F6;
+            padding-left: 5px;
+        }
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+    .social-icons a {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #1F2937;
+        color: white;
+        font-size: 18px;
+        transition: .3s;
+    }
+
+        .social-icons a:hover {
+            background: #2563EB;
+            transform: translateY(-3px);
+        }
+
+.footer hr {
+    border-color: #374151;
+    margin: 40px 0 20px;
+}
+

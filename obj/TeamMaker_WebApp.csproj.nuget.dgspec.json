@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Michah Mithun Saha\\source\\repos\\TeamMaker_WebApp\\TeamMaker_WebApp.csproj": {}
+    "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\TeamMaker_WebApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Michah Mithun Saha\\source\\repos\\TeamMaker_WebApp\\TeamMaker_WebApp.csproj": {
+    "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\TeamMaker_WebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Michah Mithun Saha\\source\\repos\\TeamMaker_WebApp\\TeamMaker_WebApp.csproj",
+        "projectUniqueName": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\TeamMaker_WebApp.csproj",
         "projectName": "TeamMaker_WebApp",
-        "projectPath": "C:\\Users\\Michah Mithun Saha\\source\\repos\\TeamMaker_WebApp\\TeamMaker_WebApp.csproj",
-        "packagesPath": "C:\\Users\\Michah Mithun Saha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Michah Mithun Saha\\source\\repos\\TeamMaker_WebApp\\obj\\",
+        "projectPath": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\TeamMaker_WebApp.csproj",
+        "packagesPath": "C:\\Users\\micha\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Michah Mithun Saha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\micha\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -52,17 +52,17 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[9.0.2, )"
+              "version": "[9.0.17, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[9.0.2, )"
+              "version": "[9.0.17, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.2, )"
+              "version": "[9.0.17, )"
             }
           },
           "imports": [
@@ -76,6 +76,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.20, 8.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[8.0.20, 8.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.20, 8.0.20]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.20, 8.0.20]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -84,7 +102,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
