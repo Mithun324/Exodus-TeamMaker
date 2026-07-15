@@ -1,103 +1,253 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Linq;
+using Microsoft.EntityFrameworkCore;
 using TeamMaker_WebApp.Data;
 using TeamMaker_WebApp.Models;
+using TeamMaker_WebApp.ViewModels;
 
 namespace TeamMaker_WebApp.Controllers
 {
     public class PlayerController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly IWebHostEnvironment _environment;
 
-        public PlayerController(ApplicationDbContext context)
+        public PlayerController(ApplicationDbContext context, IWebHostEnvironment environment)
         {
             _context = context;
+            _environment = environment;
         }
 
-        // Display the list of players
-        public IActionResult Index()
+        // =======================
+        // Display Players
+        // =======================
+        public async Task<IActionResult> Index(string? position)
         {
-            var players = _context.Players.ToList();
-            return View(players);
-        }
+            IQueryable<Player> query = _context.Players;
 
-        // ---------------------- Edit Player ----------------------
-
-        // GET: Player/Edit/1
-        public IActionResult Edit(int id)
-        {
-            var player = _context.Players.Find(id);
-            if (player == null)
+            if (!string.IsNullOrWhiteSpace(position))
             {
-                return NotFound();
+                query = query.Where(p => p.Position == position);
             }
-            return View(player);
+
+            ViewBag.CurrentPosition = position ?? "All";
+
+            return View(await query.AsNoTracking().ToListAsync());
         }
 
-        // POST: Player/Edit/1
+        // =======================
+        // Create
+        // =======================
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View(new PlayerViewModel());
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(int id, Player player)
+        public async Task<IActionResult> Create(PlayerViewModel vm)
         {
-            if (id != player.PlayerId)
+            if (!ModelState.IsValid)
+                return View(vm);
+
+            var player = new Player
             {
-                return BadRequest();
-            }
+                PlayerName = vm.PlayerName,
+                Position = vm.Position,
+                Number = vm.Number,
+                ImagePath = await SaveImageAsync(vm.ImageFile)
+            };
 
-            var existingPlayer = _context.Players.Find(id);
-            if (existingPlayer == null)
-            {
-                return NotFound();
-            }
+            _context.Players.Add(player);
+            await _context.SaveChangesAsync();
 
-            existingPlayer.PlayerName = player.PlayerName;
-            existingPlayer.Position = player.Position;
-            existingPlayer.Number = player.Number;
-
-            _context.SaveChanges();
             return RedirectToAction(nameof(Index));
         }
 
-        // ---------------------- Delete Player ----------------------
+        // =======================
+        // Edit
+        // =======================
 
-        // GET: Player/Delete/1 (Confirmation Page)
-        public IActionResult Delete(int id)
+        [HttpGet]
+        public async Task<IActionResult> Edit(int id)
         {
-            var player = _context.Players.Find(id);
+            var player = await _context.Players
+                .AsNoTracking()
+                .FirstOrDefaultAsync(x => x.PlayerId == id);
+
             if (player == null)
-            {
                 return NotFound();
+
+            var vm = new PlayerViewModel
+            {
+                PlayerId = player.PlayerId,
+                PlayerName = player.PlayerName,
+                Position = player.Position,
+                Number = player.Number,
+                ExistingImagePath = player.ImagePath
+            };
+
+            return View(vm);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, PlayerViewModel vm)
+        {
+            if (id != vm.PlayerId)
+                return BadRequest();
+
+            if (!ModelState.IsValid)
+                return View(vm);
+
+            var player = await _context.Players.FindAsync(id);
+
+            if (player == null)
+                return NotFound();
+
+            player.PlayerName = vm.PlayerName;
+            player.Position = vm.Position;
+            player.Number = vm.Number;
+
+            if (vm.ImageFile != null)
+            {
+                DeleteImageFile(player.ImagePath);
+                player.ImagePath = await SaveImageAsync(vm.ImageFile);
             }
+
+            _context.Update(player);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        // =======================
+        // Details
+        // =======================
+
+        [HttpGet]
+        public async Task<IActionResult> Details(int id)
+        {
+            var player = await _context.Players
+                .AsNoTracking()
+                .FirstOrDefaultAsync(x => x.PlayerId == id);
+
+            if (player == null)
+                return NotFound();
+
             return View(player);
         }
 
-        // POST: Player/Delete/1
+        // =======================
+        // Delete
+        // =======================
+
+        [HttpGet]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var player = await _context.Players
+                .AsNoTracking()
+                .FirstOrDefaultAsync(x => x.PlayerId == id);
+
+            if (player == null)
+                return NotFound();
+
+            return View(player);
+        }
+
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public IActionResult DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var player = _context.Players.Find(id);
+            var player = await _context.Players.FindAsync(id);
+
             if (player == null)
-            {
-                return NotFound();
-            }
+                return RedirectToAction(nameof(Index));
+
+            DeleteImageFile(player.ImagePath);
 
             _context.Players.Remove(player);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
+
             return RedirectToAction(nameof(Index));
         }
 
-        // ---------------------- Player Details ----------------------
+        // =======================
+        // Helper Methods
+        // =======================
 
-        // GET: Player/Details/1
-        public IActionResult Details(int id)
+        private async Task<string?> SaveImageAsync(IFormFile? imageFile)
         {
-            var player = _context.Players.Find(id);
-            if (player == null)
+            if (imageFile == null || imageFile.Length == 0)
+                return null;
+
+            string[] allowedExtensions =
             {
-                return NotFound();
+                ".jpg",
+                ".jpeg",
+                ".png",
+                ".webp"
+            };
+
+            string extension = Path.GetExtension(imageFile.FileName).ToLower();
+
+            if (!allowedExtensions.Contains(extension))
+                return null;
+
+            string uploadsFolder = Path.Combine(
+                _environment.WebRootPath,
+                "images",
+                "players");
+
+            if (!Directory.Exists(uploadsFolder))
+            {
+                Directory.CreateDirectory(uploadsFolder);
             }
-            return View(player);
+
+            string fileName = $"{Guid.NewGuid()}{extension}";
+            string filePath = Path.Combine(uploadsFolder, fileName);
+
+            try
+            {
+                using FileStream stream = new FileStream(filePath, FileMode.Create);
+                await imageFile.CopyToAsync(stream);
+            }
+            catch
+            {
+                return null;
+            }
+
+            return $"/Images/Players/{fileName}";
+        }
+
+        private void DeleteImageFile(string? imagePath)
+        {
+           
+            if (string.IsNullOrWhiteSpace(imagePath))
+            {
+                return;
+            }
+
+            try
+            {
+                string fullPath = Path.Combine(
+                    _environment.WebRootPath,
+                    imagePath.TrimStart('/').Replace('/', Path.DirectorySeparatorChar)
+                );
+
+                if (System.IO.File.Exists(fullPath))
+                {
+                    System.IO.File.Delete(fullPath);
+                }
+            }
+            catch (Exception ex)
+            {
+
+              // _logger.LogError(ex, "Error deleting image file.");
+
+
+            }
         }
     }
-}
+    }

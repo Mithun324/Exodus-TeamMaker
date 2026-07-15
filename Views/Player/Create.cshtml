@@ -1,19 +1,98 @@
-﻿@model TeamMaker_WebApp.Models.Player
+﻿@model TeamMaker_WebApp.ViewModels.PlayerViewModel
 
-<h2>Add New Player</h2>
+@{
+    ViewData["Title"] = "Add Player";
+    string[] positions = { "Forward", "Midfielder", "Defender", "Goalkeeper" };
+}
 
-<form asp-action="Create">
-    <div class="form-group">
-        <label asp-for="PlayerName" class="control-label"></label>
-        <input asp-for="PlayerName" class="form-control" />
+<link rel="stylesheet" href="~/css/player-form.css" />
+
+<div class="form-page">
+    <div class="form-card">
+        <div class="form-card-header">
+            <div class="form-eyebrow">Squad management</div>
+            <h1 class="form-title">Add new player</h1>
+        </div>
+
+        <form asp-action="Create" method="post" enctype="multipart/form-data">
+            @Html.AntiForgeryToken()
+
+            <!-- Image Upload -->
+            <div class="img-upload-section">
+                <div class="img-preview-wrap">
+                    <img id="imgPreview" src="/Images/Players/default.png" class="img-preview" alt="Player photo" />
+                </div>
+                <div class="img-upload-info">
+                    <label class="btn-upload" for="ImageFile">
+                        <i class="bi bi-camera"></i> Upload photo
+                    </label>
+                    <input type="file" id="ImageFile" name="ImageFile"
+                           accept=".jpg,.jpeg,.png,.webp"
+                           class="img-file-input"
+                           onchange="previewImage(this)" />
+                    <p class="img-hint">JPG, PNG or WebP · max 2MB · optional</p>
+                </div>
+            </div>
+
+            <div class="form-divider"></div>
+
+            <!-- Player Name -->
+            <div class="form-field">
+                <label asp-for="PlayerName" class="field-label"></label>
+                <input asp-for="PlayerName" class="field-input" placeholder="e.g. Ronaldo Nazário" />
+                <span asp-validation-for="PlayerName" class="field-error"></span>
+            </div>
+
+            <!-- Position -->
+            <div class="form-field">
+                <label asp-for="Position" class="field-label"></label>
+                <div class="position-btns">
+                    @foreach (var pos in positions)
+                    {
+                        <button type="button" class="pos-btn" onclick="selectPosition('@pos', this)">
+                            @pos
+                        </button>
+                    }
+                </div>
+                <input type="hidden" asp-for="Position" id="PositionInput" />
+                <span asp-validation-for="Position" class="field-error"></span>
+            </div>
+
+            <!-- Jersey Number -->
+            <div class="form-field">
+                <label asp-for="Number" class="field-label"></label>
+                <input asp-for="Number" type="number" min="1" max="99"
+                       class="field-input field-input-sm"
+                       placeholder="1 – 99" />
+                <span asp-validation-for="Number" class="field-error"></span>
+            </div>
+
+            <div class="form-actions">
+                <a asp-action="Index" class="btn-cancel">Cancel</a>
+                <button type="submit" class="btn-save">
+                    <i class="bi bi-check-lg"></i> Save player
+                </button>
+            </div>
+        </form>
     </div>
-    <div class="form-group">
-        <label asp-for="Position" class="control-label"></label>
-        <input asp-for="Position" class="form-control" />
-    </div>
-    <div class="form-group">
-        <label asp-for="Number" class="control-label"></label>
-        <input asp-for="Number" class="form-control" />
-    </div>
-    <button type="submit" class="btn btn-primary">Create</button>
-</form>
+</div>
+
+@section Scripts {
+<script>
+    function previewImage(input) {
+        if (input.files && input.files[0]) {
+            const reader = new FileReader();
+            reader.onload = e => {
+                document.getElementById('imgPreview').src = e.target.result;
+            };
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    function selectPosition(pos, btn) {
+        document.querySelectorAll('.pos-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById('PositionInput').value = pos;
+    }
+</script>
+}

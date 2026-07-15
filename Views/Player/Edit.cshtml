@@ -1,34 +1,102 @@
-﻿@model TeamMaker_WebApp.Models.Player
+﻿@model TeamMaker_WebApp.ViewModels.PlayerViewModel
 
-<h2>Edit Player</h2>
+@{
+    ViewData["Title"] = "Edit Player";
+    string[] positions = { "Forward", "Midfielder", "Defender", "Goalkeeper" };
+    string currentImg = string.IsNullOrEmpty(Model.ExistingImagePath)
+        ? "/Images/Players/default.webp"
+        : Model.ExistingImagePath;
+}
 
-<form asp-controller="Player" asp-action="Edit" method="post">
-    <input type="hidden" asp-for="PlayerId" />
+<link rel="stylesheet" href="~/css/player-form.css" />
 
-    <div class="form-group">
-        <label for="PlayerName">Player Name</label>
-        <input type="text" id="PlayerName" name="PlayerName" class="form-control" value="@Model.PlayerName" required />
+<div class="form-page">
+    <div class="form-card">
+        <div class="form-card-header">
+            <div class="form-eyebrow">Squad management</div>
+            <h1 class="form-title">Edit player</h1>
+        </div>
+
+        <form asp-action="Edit" asp-route-id="@Model.PlayerId"
+              method="post" enctype="multipart/form-data">
+            @Html.AntiForgeryToken()
+            <input type="hidden" asp-for="PlayerId" />
+            <input type="hidden" asp-for="ExistingImagePath" />
+
+            <!-- Image Upload -->
+            <div class="img-upload-section">
+                <div class="img-preview-wrap">
+                    <img id="imgPreview" src="@currentImg" class="img-preview" alt="Player photo" />
+                </div>
+                <div class="img-upload-info">
+                    <label class="btn-upload" for="ImageFile">
+                        <i class="bi bi-camera"></i> Change photo
+                    </label>
+                    <input type="file" id="ImageFile" name="ImageFile"
+                           accept=".jpg,.jpeg,.png,.webp"
+                           class="img-file-input"
+                           onchange="previewImage(this)" />
+                    <p class="img-hint">Leave empty to keep current photo</p>
+                </div>
+            </div>
+
+            <div class="form-divider"></div>
+
+            <div class="form-field">
+                <label asp-for="PlayerName" class="field-label"></label>
+                <input asp-for="PlayerName" class="field-input" />
+                <span asp-validation-for="PlayerName" class="field-error"></span>
+            </div>
+
+            <div class="form-field">
+                <label asp-for="Position" class="field-label"></label>
+                <div class="position-btns">
+                    @foreach (var pos in positions)
+                    {
+                        <button type="button"
+                                class="pos-btn @(Model.Position == pos ? "active" : "")"
+                                onclick="selectPosition('@pos', this)">
+                            @pos
+                        </button>
+                    }
+                </div>
+                <input type="hidden" asp-for="Position" id="PositionInput" />
+                <span asp-validation-for="Position" class="field-error"></span>
+            </div>
+
+            <div class="form-field">
+                <label asp-for="Number" class="field-label"></label>
+                <input asp-for="Number" type="number" min="1" max="99"
+                       class="field-input field-input-sm" />
+                <span asp-validation-for="Number" class="field-error"></span>
+            </div>
+
+            <div class="form-actions">
+                <a asp-action="Index" class="btn-cancel">Cancel</a>
+                <button type="submit" class="btn-save">
+                    <i class="bi bi-check-lg"></i> Save changes
+                </button>
+            </div>
+        </form>
     </div>
-
-    <div class="form-group">
-        <label for="Position">Position</label>
-        <select id="Position" name="Position" class="form-control">
-            <option value="Goalkeeper" selected="@(Model.Position == "Goalkeeper" ? "selected" : null)">Goalkeeper</option>
-            <option value="Defender" selected="@(Model.Position == "Defender" ? "selected" : null)">Defender</option>
-            <option value="Midfielder" selected="@(Model.Position == "Midfielder" ? "selected" : null)">Midfielder</option>
-            <option value="Forward" selected="@(Model.Position == "Forward" ? "selected" : null)">Forward</option>
-        </select>
-    </div>
-
-    <div class="form-group">
-        <label for="Number">Jersey Number</label>
-        <input type="number" id="Number" name="Number" class="form-control" value="@Model.Number" min="1" max="99" required />
-    </div>
-
-    <button type="submit" class="btn btn-primary">Save Changes</button>
-    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
-</form>
+</div>
 
 @section Scripts {
-    <partial name="_ValidationScriptsPartial" />
+<script>
+    function previewImage(input) {
+        if (input.files && input.files[0]) {
+            const reader = new FileReader();
+            reader.onload = e => {
+                document.getElementById('imgPreview').src = e.target.result;
+            };
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    function selectPosition(pos, btn) {
+        document.querySelectorAll('.pos-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById('PositionInput').value = pos;
+    }
+</script>
 }
