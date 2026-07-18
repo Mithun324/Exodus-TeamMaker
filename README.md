@@ -1,41 +1,204 @@
-Team Maker Web App 🏆⚽
-The Team Maker Web App is a C# ASP.NET Core web application designed to help users select players and generate fair and balanced teams for football matches. The app ensures that each team has at least one goalkeeper, one midfielder, and one forward, while distributing the remaining players randomly. It provides an intuitive interface to manage players, create teams, and keep track of previous team generations.
+# ⚽ TeamMaker WebApp
 
-Key Features
-✅ Player Selection:
-A hovering checklist on the homepage acts as both buttons and checkboxes, allowing users to select/deselect players for team generation.
-Only selected players will be included in team creation.
+A modern ASP.NET Core MVC web application for creating balanced football teams quickly and efficiently. TeamMaker allows users to manage players, upload player photos, and generate random teams with just a few clicks.
 
-✅ Team Generation:
-Option to generate 2 or 3 teams.
-Ensures each team has one goalkeeper, one midfielder, and one forward.
-Other players are distributed randomly to balance the teams.
+## 📖 Overview
 
-✅ Player Management:
-A dedicated Player Management Page where users can add, edit, or delete players from the database.
-New players appear on the homepage automatically.
+TeamMaker is designed to simplify team selection for football matches. Instead of manually dividing players, the application automatically distributes selected players into balanced teams.
 
-✅ Generated Teams History:
-Displays previously generated teams with a timestamp.
-The most recently generated teams appear at the top.
-A checkbox allows users to select a specific generated team for reference.
-If no teams have been generated yet, the message "No teams generated yet" is displayed.
+The application features a modern responsive interface, player management, image uploads, and automatic team generation.
 
-✅ Team Page:
-Displays team-related images.
-If no photos are available, it shows football-related text instead.
+## ✨ Features
 
-✅ Enhanced UI & Navigation:
-A sliding image banner is included on the homepage to improve aesthetics.
-A simple and user-friendly navigation bar with links to:
-Home (Player Selection)
-Player (Manage Players)
-Generated Teams (View past teams)
-Team (Team images and football content)
+- ✅ Add new players
+- ✅ Edit player information
+- ✅ Delete players
+- ✅ View player details
+- ✅ Upload player profile images
+- ✅ Default image support
+- ✅ Random team generation
+- ✅ Select 2–4 teams
+- ✅ Select specific players
+- ✅ Responsive modern UI
+- ✅ Professional homepage
+- ✅ Generated team view
 
-✅ Technology Stack:
-ASP.NET Core (MVC)
-Entity Framework Core (for database management)
-Microsoft SQL Server (as the database)
-Bootstrap & CSS (for responsive design)
-This app provides an easy and efficient way to form football teams dynamically, making it ideal for casual games, tournaments, and practice sessions. 🚀⚽
+## 🛠 Built With
+
+### Frontend
+
+- HTML5
+- CSS3
+- Bootstrap 5
+- JavaScript
+- Razor Views
+
+### Backend
+
+- ASP.NET Core MVC
+- C#
+- Entity Framework Core
+
+### Database
+
+- Microsoft SQL Server
+
+---
+
+## 📂 Project Structure
+
+
+TeamMaker_WebApp
+│
+├── Controllers
+│   ├── HomeController
+│   ├── PlayerController
+│   └── TeamController
+│
+├── Models
+│   ├── Player
+│   ├── Team
+│   └── ViewModels
+│
+├── Views
+│   ├── Home
+│   ├── Player
+│   ├── Team
+│   └── Shared
+│
+├── wwwroot
+│   ├── css
+│   ├── js
+│   ├── images
+│   └── uploads
+│
+└── Data
+    └── ApplicationDbContext
+
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Visual Studio 2022
+- .NET 8 SDK 
+- SQL Server
+- SQL Server Management Studio
+
+---
+
+### Installation
+
+Clone the repository
+
+bash
+git clone https://github.com/yourusername/TeamMaker_WebApp.git
+
+
+Navigate to the project
+
+bash
+cd TeamMaker_WebApp
+
+
+Restore packages
+
+bash
+dotnet restore
+
+
+Update the database
+
+bash
+dotnet ef database update
+
+
+Run the project
+
+bash
+dotnet run
+
+
+Or simply open the solution in Visual Studio and press **F5**.
+
+## 📸 Screenshots
+
+You can add screenshots here.
+## 📸 Screenshots
+
+| Home | Players |
+|------|---------|
+| ![](Screenshots/Home.png) | ![](Screenshots/Players.png) |
+
+| Add Player | Generated Teams |
+|------------|-----------------|
+| ![](Screenshots/Players.png) | ![](Screenshots/Generated-Teams.png) |
+
+Player Details
+## 📋 Main Functionalities
+
+### Player Management
+
+- Add players
+- Upload profile images
+- Edit player information
+- Delete players
+- View player details
+
+### Team Generation
+
+- Select players
+- Choose number of teams
+- Generate balanced random teams
+- View generated teams
+
+---
+
+## 📌 Future Improvements
+
+- Player skill ratings
+- Position-based balancing
+- Team captain selection
+- Match scheduling
+- Export generated teams as PDF
+- User authentication
+- Admin dashboard
+- Team history
+- Drag-and-drop team editing
+
+---
+
+## 💻 Technologies Used
+
+| Technology | Purpose |
+|------------|---------|
+| ASP.NET Core MVC | Web Framework |
+| Entity Framework Core | ORM |
+| SQL Server | Database |
+| Bootstrap 5 | UI Framework |
+| JavaScript | Client-side Functionality |
+| CSS3 | Styling |
+
+---
+
+## 👨‍💻 Author
+
+**Michah Mithun Saha**
+
+Computer Science Graduate
+
+University of Liberal Arts Bangladesh (ULAB)
+
+GitHub: https://github.com/Mithun324
+
+LinkedIn: https://linkedin.com/in/michah-mithun-saha
+
+---
+
+## 📄 License
+
+This project is developed for educational and portfolio purposes.
+
+---
+
+⭐ If you found this project useful, consider giving it a star.
