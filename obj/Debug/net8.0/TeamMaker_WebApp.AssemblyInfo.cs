@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TeamMaker_WebApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+adbbaae6a228717e402eb33469dbac187d23e4a3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+87526762034e860e1c4fddc9a0e70bc8492eac7b")]
 [assembly: System.Reflection.AssemblyProductAttribute("TeamMaker_WebApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TeamMaker_WebApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
