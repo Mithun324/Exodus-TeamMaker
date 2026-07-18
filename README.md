@@ -123,16 +123,13 @@ Or simply open the solution in Visual Studio and press **F5**.
 
 ## 📸 Screenshots
 
-You can add screenshots here.
-## 📸 Screenshots
-
 | Home | Players |
 |------|---------|
-| ![](Images/Screenshots/Home.png) | ![](Images/Screenshots/Players.png) |
+| ![](TeamMaker_WebApp/wwwroot/Images/Screenshots/Home.png) | ![](TeamMaker_WebApp/wwwroot/Images/Screenshots/Players.png) |
 
-| Add Player | Generated Teams |
-|------------|-----------------|
-| ![](Images/Screenshots/Players.png) | ![](Images/Screenshots/Generated-Teams.png) |
+| Generated Teams |
+|-----------------|
+| ![](TeamMaker_WebApp/wwwroot/Images/Screenshots/GeneratedTeams.png) |
 
 Player Details
 ## 📋 Main Functionalities
