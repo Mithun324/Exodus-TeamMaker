@@ -125,11 +125,11 @@ Or simply open the solution in Visual Studio and press **F5**.
 
 | Home | Players |
 |------|---------|
-| ![](TeamMaker_WebApp/wwwroot/Images/Screenshots/Home.png) | ![](TeamMaker_WebApp/wwwroot/Images/Screenshots/Players.png) |
+| ![](wwwroot/Images/Screenshots/Home.png) | ![](wwwroot/Images/Screenshots/Players.png) |
 
 | Generated Teams |
 |-----------------|
-| ![](TeamMaker_WebApp/wwwroot/Images/Screenshots/GeneratedTeams.png) |
+| ![](wwwroot/Images/Screenshots/GeneratedTeams.png) |
 
 Player Details
 ## 📋 Main Functionalities
