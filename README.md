@@ -128,11 +128,11 @@ You can add screenshots here.
 
 | Home | Players |
 |------|---------|
-| ![](Screenshots/Home.png) | ![](Screenshots/Players.png) |
+| ![](Images/Screenshots/Home.png) | ![](Images/Screenshots/Players.png) |
 
 | Add Player | Generated Teams |
 |------------|-----------------|
-| ![](Screenshots/Players.png) | ![](Screenshots/Generated-Teams.png) |
+| ![](Images/Screenshots/Players.png) | ![](Images/Screenshots/Generated-Teams.png) |
 
 Player Details
 ## 📋 Main Functionalities
