@@ -74,8 +74,34 @@
     </div>
 
 </section>
+
+<section class="cta-section">
+
+<h2>
+
+Ready to Create Balanced Football Teams?
+
+</h2>
+
+<p>
+
+Manage players and generate teams in seconds.
+
+</p>
+
+<a asp-controller="Player"
+   asp-action="Index"
+   class="btn btn-primary btn-lg">
+
+Add Your Players
+
+</a>
+
+</section>
+
+
 <!-- Main Form -->
-<div class="home-container">
+<div class="home-container"  id="team-generator">
 
     <form asp-controller="Home" asp-action="GenerateTeams" method="post" id="teamForm">
 
@@ -143,9 +169,12 @@
                     "Goalkeeper" => "pos-gk",
                     _            => ""
                 };
-                var initials = string.Concat(
-                    player.PlayerName.Split(' ').Take(2).Select(w => w[0])
-                ).ToUpper();
+              var nameParts = (player.PlayerName ?? "")
+    .Split(' ', StringSplitOptions.RemoveEmptyEntries);
+
+var initials = nameParts.Length > 0
+    ? string.Concat(nameParts.Take(2).Select(w => w[0])).ToUpper()
+    : "?";;
 
                 <div class="player-card" onclick="togglePlayer(this)"
                      data-player-id="@player.PlayerId">
@@ -349,29 +378,7 @@
     </div>
 
 </section>
-<section class="cta-section">
 
-<h2>
-
-Ready to Create Balanced Football Teams?
-
-</h2>
-
-<p>
-
-Manage players and generate teams in seconds.
-
-</p>
-
-<a asp-controller="Player"
-   asp-action="Index"
-   class="btn btn-primary btn-lg">
-
-Manage Players
-
-</a>
-
-</section>
 
 
 

@@ -78,7 +78,7 @@ html {
 }
 
 .photo-fader {
-    background-image: url(…path to your image…);
+    background-image: url(C:\Users\micha\source\repos\TeamMaker_WebApp\wwwroot\Images\Portfolio); 
     background-size: cover;
     animation: 10s ease-in-out 0s photo-fader infinite;
 }
@@ -153,9 +153,11 @@ body {
 }
 
 
-h1, h2, h3, h4, h5, h6, p, a, span {
-    text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8);
-    color: white;
+h1, h2, h4, h5, h6, p, a, span {
+    color: whitesmoke;
+}
+h3{
+    color : black;
 }
 
 

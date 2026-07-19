@@ -3,6 +3,70 @@
   "WorkspaceRootPath": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|c:\\users\\micha\\source\\repos\\teammaker_webapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|c:\\users\\micha\\source\\repos\\teammaker_webapp\\views\\player\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|solutionrelative:views\\player\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|c:\\users\\micha\\source\\repos\\teammaker_webapp\\viewmodels\\playerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|solutionrelative:viewmodels\\playerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|c:\\users\\micha\\source\\repos\\teammaker_webapp\\models\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|solutionrelative:models\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|c:\\users\\micha\\source\\repos\\teammaker_webapp\\controllers\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|solutionrelative:controllers\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|c:\\users\\micha\\source\\repos\\teammaker_webapp\\views\\player\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|solutionrelative:views\\player\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|c:\\users\\micha\\source\\repos\\teammaker_webapp\\views\\player\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|solutionrelative:views\\player\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|c:\\users\\micha\\source\\repos\\teammaker_webapp\\wwwroot\\css\\player-list.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|solutionrelative:wwwroot\\css\\player-list.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|c:\\users\\micha\\source\\repos\\teammaker_webapp\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|c:\\users\\micha\\source\\repos\\teammaker_webapp\\controllers\\teamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|solutionrelative:controllers\\teamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|c:\\users\\micha\\source\\repos\\teammaker_webapp\\views\\team\\generatedteams.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|solutionrelative:views\\team\\generatedteams.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|c:\\users\\micha\\source\\repos\\teammaker_webapp\\wwwroot\\css\\generated-teams.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|solutionrelative:wwwroot\\css\\generated-teams.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|c:\\users\\micha\\source\\repos\\teammaker_webapp\\viewmodels\\moveplayerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|solutionrelative:viewmodels\\moveplayerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|c:\\users\\micha\\source\\repos\\teammaker_webapp\\wwwroot\\css\\player-form.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|solutionrelative:wwwroot\\css\\player-form.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|c:\\users\\micha\\source\\repos\\teammaker_webapp\\views\\player\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|solutionrelative:views\\player\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|c:\\users\\micha\\source\\repos\\teammaker_webapp\\views\\player\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|solutionrelative:views\\player\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|c:\\users\\micha\\source\\repos\\teammaker_webapp\\wwwroot\\css\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|solutionrelative:wwwroot\\css\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
@@ -11,28 +75,8 @@
       "RelativeMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|c:\\users\\micha\\source\\repos\\teammaker_webapp\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|c:\\users\\micha\\source\\repos\\teammaker_webapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|c:\\users\\micha\\source\\repos\\teammaker_webapp\\wwwroot\\css\\generated-teams.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|solutionrelative:wwwroot\\css\\generated-teams.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|c:\\users\\micha\\source\\repos\\teammaker_webapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|c:\\users\\micha\\source\\repos\\teammaker_webapp\\wwwroot\\css\\player-form.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|solutionrelative:wwwroot\\css\\player-form.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|c:\\users\\micha\\source\\repos\\teammaker_webapp\\wwwroot\\css\\player-list.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|solutionrelative:wwwroot\\css\\player-list.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|c:\\users\\micha\\source\\repos\\teammaker_webapp\\views\\shared\\_footer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -51,52 +95,12 @@
       "RelativeMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|solutionrelative:views\\team\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|c:\\users\\micha\\source\\repos\\teammaker_webapp\\controllers\\teamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|solutionrelative:controllers\\teamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|c:\\users\\micha\\source\\repos\\teammaker_webapp\\views\\player\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|solutionrelative:views\\player\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|c:\\users\\micha\\source\\repos\\teammaker_webapp\\views\\player\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|solutionrelative:views\\player\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|c:\\users\\micha\\source\\repos\\teammaker_webapp\\views\\player\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|solutionrelative:views\\player\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|c:\\users\\micha\\source\\repos\\teammaker_webapp\\views\\player\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|solutionrelative:views\\player\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|c:\\users\\micha\\source\\repos\\teammaker_webapp\\views\\player\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|solutionrelative:views\\player\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|c:\\users\\micha\\source\\repos\\teammaker_webapp\\views\\team\\generatedteams.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|solutionrelative:views\\team\\generatedteams.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|c:\\users\\micha\\source\\repos\\teammaker_webapp\\views\\team\\createteams.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|solutionrelative:views\\team\\createteams.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|c:\\users\\micha\\source\\repos\\teammaker_webapp\\viewmodels\\playerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|solutionrelative:viewmodels\\playerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|c:\\users\\micha\\source\\repos\\teammaker_webapp\\models\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|solutionrelative:models\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|c:\\users\\micha\\source\\repos\\teammaker_webapp\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|c:\\users\\micha\\source\\repos\\teammaker_webapp\\controllers\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|solutionrelative:controllers\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A51A3B90-D25A-4BDC-9877-6D5E5254E093}|TeamMaker_WebApp.csproj|c:\\users\\micha\\source\\repos\\teammaker_webapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -170,7 +174,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 254,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
@@ -186,192 +190,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "player-list.css",
-              "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\wwwroot\\css\\player-list.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\player-list.css",
-              "ToolTip": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\wwwroot\\css\\player-list.css",
-              "RelativeToolTip": "wwwroot\\css\\player-list.css",
-              "ViewState": "AgIAAJIBAAAAAAAAAAAuwKUBAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-06-27T19:19:06.525Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "player-form.css",
-              "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\wwwroot\\css\\player-form.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\player-form.css",
-              "ToolTip": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\wwwroot\\css\\player-form.css",
-              "RelativeToolTip": "wwwroot\\css\\player-form.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-07-13T16:14:59.413Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Views\\Player\\Details.cshtml",
-              "RelativeDocumentMoniker": "Views\\Player\\Details.cshtml",
-              "ToolTip": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Views\\Player\\Details.cshtml",
-              "RelativeToolTip": "Views\\Player\\Details.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-03T19:42:32.268Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Views\\Player\\Delete.cshtml",
-              "RelativeDocumentMoniker": "Views\\Player\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Views\\Player\\Delete.cshtml",
-              "RelativeToolTip": "Views\\Player\\Delete.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-03T19:41:54.539Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "_Footer.cshtml",
-              "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Views\\Shared\\_Footer.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Footer.cshtml",
-              "ToolTip": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Views\\Shared\\_Footer.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Footer.cshtml",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAAADsAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-07-13T18:20:51.264Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Views\\Team\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Team\\Index.cshtml",
-              "ToolTip": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Views\\Team\\Index.cshtml",
-              "RelativeToolTip": "Views\\Team\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-07-13T16:57:25.443Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "generated-teams.css",
-              "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\wwwroot\\css\\generated-teams.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\generated-teams.css",
-              "ToolTip": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\wwwroot\\css\\generated-teams.css",
-              "RelativeToolTip": "wwwroot\\css\\generated-teams.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-06-27T19:31:45.242Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAD4vyAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T11:30:28.149Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Team.cs",
-              "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Models\\Team.cs",
-              "RelativeDocumentMoniker": "Models\\Team.cs",
-              "ToolTip": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Models\\Team.cs",
-              "RelativeToolTip": "Models\\Team.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T11:27:45.263Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Views\\Player\\Create.cshtml",
-              "RelativeDocumentMoniker": "Views\\Player\\Create.cshtml",
-              "ToolTip": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Views\\Player\\Create.cshtml",
-              "RelativeToolTip": "Views\\Player\\Create.cshtml",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAnwCkAAABlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-18T21:36:59.224Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "home.css",
-              "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\wwwroot\\css\\home.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\home.css",
-              "ToolTip": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\wwwroot\\css\\home.css",
-              "RelativeToolTip": "wwwroot\\css\\home.css",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAAAHgAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-06-27T20:12:10.046Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwCIAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-19T16:43:29.404Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "site.css",
-              "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
-              "ToolTip": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "wwwroot\\css\\site.css",
-              "ViewState": "AgIAAK0AAAAAAAAAAAAIwL4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-02-21T19:05:33.331Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-18T22:13:19.193Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Views\\Player\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Player\\Index.cshtml",
               "ToolTip": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Views\\Player\\Index.cshtml",
               "RelativeToolTip": "Views\\Player\\Index.cshtml",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAAAFEAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAF4AAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-18T21:36:24.331Z"
+              "WhenOpened": "2025-02-18T21:36:24.331Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 4,
+              "Title": "PlayerController.cs",
+              "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Controllers\\PlayerController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PlayerController.cs",
+              "ToolTip": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Controllers\\PlayerController.cs",
+              "RelativeToolTip": "Controllers\\PlayerController.cs",
+              "ViewState": "AgIAAOcAAAAAAAAAAAAqwAEBAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T21:37:23.7Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Views\\Player\\Edit.cshtml",
               "RelativeDocumentMoniker": "Views\\Player\\Edit.cshtml",
@@ -383,7 +228,242 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Views\\Player\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Player\\Create.cshtml",
+              "ToolTip": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Views\\Player\\Create.cshtml",
+              "RelativeToolTip": "Views\\Player\\Create.cshtml",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAnwBYAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-18T21:36:59.224Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwCIAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-19T16:43:29.404Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Models\\Player.cs",
+              "RelativeDocumentMoniker": "Models\\Player.cs",
+              "ToolTip": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Models\\Player.cs",
+              "RelativeToolTip": "Models\\Player.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAwAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T11:27:22.691Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PlayerViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\ViewModels\\PlayerViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\PlayerViewModel.cs",
+              "ToolTip": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\ViewModels\\PlayerViewModel.cs",
+              "RelativeToolTip": "ViewModels\\PlayerViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T15:54:00.693Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TeamController.cs",
+              "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Controllers\\TeamController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TeamController.cs",
+              "ToolTip": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Controllers\\TeamController.cs",
+              "RelativeToolTip": "Controllers\\TeamController.cs",
+              "ViewState": "AgIAAIYAAAAAAAAAAAAkwKEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T11:28:23.276Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 10,
+              "Title": "GeneratedTeams.cshtml",
+              "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Views\\Team\\GeneratedTeams.cshtml",
+              "RelativeDocumentMoniker": "Views\\Team\\GeneratedTeams.cshtml",
+              "ToolTip": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Views\\Team\\GeneratedTeams.cshtml",
+              "RelativeToolTip": "Views\\Team\\GeneratedTeams.cshtml",
+              "ViewState": "AgIAAHsAAAAAAAAAAAAAAIQAAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-27T19:28:47.168Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAJYAAAAAAAAAAAAAALAAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-18T22:13:19.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "wwwroot\\css\\site.css",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAIwFUAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-02-21T19:05:33.331Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "generated-teams.css",
+              "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\wwwroot\\css\\generated-teams.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\generated-teams.css",
+              "ToolTip": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\wwwroot\\css\\generated-teams.css",
+              "RelativeToolTip": "wwwroot\\css\\generated-teams.css",
+              "ViewState": "AgIAADoDAAAAAAAAAAAYwD8DAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-06-27T19:31:45.242Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "home.css",
+              "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\wwwroot\\css\\home.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\home.css",
+              "ToolTip": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\wwwroot\\css\\home.css",
+              "RelativeToolTip": "wwwroot\\css\\home.css",
+              "ViewState": "AgIAAJoCAAAAAAAAAAAAAMICAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-06-27T20:12:10.046Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "player-list.css",
+              "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\wwwroot\\css\\player-list.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\player-list.css",
+              "ToolTip": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\wwwroot\\css\\player-list.css",
+              "RelativeToolTip": "wwwroot\\css\\player-list.css",
+              "ViewState": "AgIAAGkCAAAAAAAAAAAQwIcCAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-06-27T19:19:06.525Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "player-form.css",
+              "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\wwwroot\\css\\player-form.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\player-form.css",
+              "ToolTip": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\wwwroot\\css\\player-form.css",
+              "RelativeToolTip": "wwwroot\\css\\player-form.css",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-07-13T16:14:59.413Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MovePlayerViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\ViewModels\\MovePlayerViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\MovePlayerViewModel.cs",
+              "ToolTip": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\ViewModels\\MovePlayerViewModel.cs",
+              "RelativeToolTip": "ViewModels\\MovePlayerViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-19T09:17:29.298Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "_Footer.cshtml",
+              "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Views\\Shared\\_Footer.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Footer.cshtml",
+              "ToolTip": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Views\\Shared\\_Footer.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Footer.cshtml",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAADsAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-13T18:20:51.264Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Views\\Team\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Team\\Index.cshtml",
+              "ToolTip": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Views\\Team\\Index.cshtml",
+              "RelativeToolTip": "Views\\Team\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-13T16:57:25.443Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Views\\Player\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Player\\Details.cshtml",
+              "ToolTip": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Views\\Player\\Details.cshtml",
+              "RelativeToolTip": "Views\\Player\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-03T19:42:32.268Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Views\\Player\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\Player\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Views\\Player\\Delete.cshtml",
+              "RelativeToolTip": "Views\\Player\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-03T19:41:54.539Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Team.cs",
+              "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Models\\Team.cs",
+              "RelativeDocumentMoniker": "Models\\Team.cs",
+              "ToolTip": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Models\\Team.cs",
+              "RelativeToolTip": "Models\\Team.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T11:27:45.263Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAD4vyAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T11:30:28.149Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "TeamMaker_WebApp.csproj",
               "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\TeamMaker_WebApp.csproj",
               "RelativeDocumentMoniker": "TeamMaker_WebApp.csproj",
@@ -395,31 +475,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "GeneratedTeams.cshtml",
-              "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Views\\Team\\GeneratedTeams.cshtml",
-              "RelativeDocumentMoniker": "Views\\Team\\GeneratedTeams.cshtml",
-              "ToolTip": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Views\\Team\\GeneratedTeams.cshtml",
-              "RelativeToolTip": "Views\\Team\\GeneratedTeams.cshtml",
-              "ViewState": "AgIAAA0BAAAAAAAAAAAQwCsBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-27T19:28:47.168Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "TeamController.cs",
-              "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Controllers\\TeamController.cs",
-              "RelativeDocumentMoniker": "Controllers\\TeamController.cs",
-              "ToolTip": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Controllers\\TeamController.cs",
-              "RelativeToolTip": "Controllers\\TeamController.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAwwA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T11:28:23.276Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 23,
               "Title": "CreateTeams.cshtml",
               "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Views\\Team\\CreateTeams.cshtml",
               "RelativeDocumentMoniker": "Views\\Team\\CreateTeams.cshtml",
@@ -431,19 +487,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Player.cs",
-              "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Models\\Player.cs",
-              "RelativeDocumentMoniker": "Models\\Player.cs",
-              "ToolTip": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Models\\Player.cs",
-              "RelativeToolTip": "Models\\Player.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA4AAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T11:27:22.691Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
@@ -455,31 +499,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "PlayerViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\ViewModels\\PlayerViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\PlayerViewModel.cs",
-              "ToolTip": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\ViewModels\\PlayerViewModel.cs",
-              "RelativeToolTip": "ViewModels\\PlayerViewModel.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-13T15:54:00.693Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "PlayerController.cs",
-              "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Controllers\\PlayerController.cs",
-              "RelativeDocumentMoniker": "Controllers\\PlayerController.cs",
-              "ToolTip": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Controllers\\PlayerController.cs",
-              "RelativeToolTip": "Controllers\\PlayerController.cs",
-              "ViewState": "AgIAAOAAAAAAAAAAAAAswAMAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T21:37:23.7Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 40,
               "Title": "20260713155531_AddImagePathToPlayer.cs",
               "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Migrations\\20260713155531_AddImagePathToPlayer.cs",
               "RelativeDocumentMoniker": "Migrations\\20260713155531_AddImagePathToPlayer.cs",
@@ -491,7 +511,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
@@ -503,7 +523,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "20260627195706_AddTeamIdToPlayer.cs",
               "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Migrations\\20260627195706_AddTeamIdToPlayer.cs",
               "RelativeDocumentMoniker": "Migrations\\20260627195706_AddTeamIdToPlayer.cs",
@@ -515,7 +535,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "ErrorViewModel.cs",
               "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Models\\ErrorViewModel.cs",
               "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
@@ -527,7 +547,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "20260627194835_MakeTeamNameNullable.cs",
               "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Migrations\\20260627194835_MakeTeamNameNullable.cs",
               "RelativeDocumentMoniker": "Migrations\\20260627194835_MakeTeamNameNullable.cs",
@@ -539,7 +559,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "20260627190506_RestartInit.cs",
               "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Migrations\\20260627190506_RestartInit.cs",
               "RelativeDocumentMoniker": "Migrations\\20260627190506_RestartInit.cs",
@@ -551,7 +571,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "20260627190141_InitialRestartCreate.cs",
               "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Migrations\\20260627190141_InitialRestartCreate.cs",
               "RelativeDocumentMoniker": "Migrations\\20260627190141_InitialRestartCreate.cs",
@@ -563,7 +583,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -575,7 +595,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "_ViewImports.cshtml",
               "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Views\\_ViewImports.cshtml",
               "RelativeDocumentMoniker": "Views\\_ViewImports.cshtml",
@@ -587,7 +607,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "20250303193304_InitialNew.cs",
               "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Migrations\\20250303193304_InitialNew.cs",
               "RelativeDocumentMoniker": "Migrations\\20250303193304_InitialNew.cs",
@@ -599,7 +619,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "ApplicationDbContextModelSnapshot.cs",
               "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Migrations\\ApplicationDbContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "Migrations\\ApplicationDbContextModelSnapshot.cs",
@@ -611,7 +631,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "_ValidationScriptsPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
@@ -623,7 +643,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "Error.cshtml",
               "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Views\\Shared\\Error.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\Error.cshtml",
@@ -635,7 +655,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "_ViewStart.cshtml",
               "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Views\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "Views\\_ViewStart.cshtml",
@@ -647,7 +667,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "20250218213439_AddPlayerNumber.cs",
               "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Migrations\\20250218213439_AddPlayerNumber.cs",
               "RelativeDocumentMoniker": "Migrations\\20250218213439_AddPlayerNumber.cs",
@@ -659,7 +679,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "20250216121206_InitialCreate.cs",
               "DocumentMoniker": "C:\\Users\\micha\\source\\repos\\TeamMaker_WebApp\\Migrations\\20250216121206_InitialCreate.cs",
               "RelativeDocumentMoniker": "Migrations\\20250216121206_InitialCreate.cs",

@@ -420,3 +420,229 @@
     border: 1px solid #E5E7EB;
     flex-shrink: 0;
 }
+
+/*=====================================
+    GENERATOR CTA
+======================================*/
+
+.generator-cta {
+    margin-bottom: 40px;
+    background: linear-gradient(135deg,#2563EB,#1D4ED8);
+    border-radius: 24px;
+    padding: 45px;
+    color: white;
+    overflow: hidden;
+    position: relative;
+}
+
+    .generator-cta::before {
+        content: '';
+        position: absolute;
+        right: -80px;
+        top: -80px;
+        width: 250px;
+        height: 250px;
+        background: rgba(255,255,255,.08);
+        border-radius: 50%;
+    }
+
+.generator-cta-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.cta-badge {
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 50px;
+    background: rgba(255,255,255,.15);
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.generator-cta h2 {
+    font-size: 38px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.generator-cta p {
+    font-size: 17px;
+    color: rgba(255,255,255,.9);
+    max-width: 600px;
+}
+
+.btn-generator {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+    color: #2563EB;
+    padding: 18px 34px;
+    border-radius: 14px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 700;
+    transition: .25s;
+    white-space: nowrap;
+}
+
+    .btn-generator:hover {
+        background: #EFF6FF;
+        color: #1D4ED8;
+        transform: translateY(-4px);
+        text-decoration: none;
+    }
+
+@media(max-width:768px) {
+
+    .generator-cta {
+        padding: 35px 25px;
+    }
+
+    .generator-cta-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .generator-cta h2 {
+        font-size: 30px;
+    }
+
+    .btn-generator {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+
+
+/* ── Confirm modal ─────────────────────────── */
+.tm-modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .65);
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+    .tm-modal-overlay.show {
+        display: flex;
+    }
+
+.tm-modal {
+    background: #1F2937;
+    border: 1px solid #374151;
+    border-radius: 14px;
+    padding: 28px;
+    max-width: 380px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .5);
+}
+
+.tm-modal-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: rgba(220, 38, 38, .15);
+    color: #F87171;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+}
+
+.tm-modal-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: #F9FAFB;
+    margin-bottom: 8px;
+}
+
+.tm-modal-body {
+    font-size: 13px;
+    color: #9CA3AF;
+    margin-bottom: 20px;
+}
+
+.tm-modal-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.tm-modal-cancel {
+    flex: 1;
+    background: #374151;
+    color: #E5E7EB;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+    .tm-modal-cancel:hover {
+        background: #4B5563;
+    }
+
+.tm-modal-confirm {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background: #DC2626;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+    .tm-modal-confirm:hover {
+        opacity: .9;
+    }
+
+/* ── Header actions ───────────────────────── */
+.tm-header-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.tm-clear-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    color: #F87171;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 9px 16px;
+    border-radius: 8px;
+    border: 1px solid #7F1D1D;
+    cursor: pointer;
+    transition: background .12s, opacity .12s;
+}
+
+    .tm-clear-btn:hover {
+        background: rgba(220, 38, 38, .12);
+        border-color: #DC2626;
+    }
+
+    .tm-clear-btn:disabled {
+        opacity: .35;
+        cursor: not-allowed;
+    }

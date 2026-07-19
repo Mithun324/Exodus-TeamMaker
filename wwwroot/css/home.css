@@ -689,7 +689,7 @@
 
     .cta-section p {
         font-size: 18px;
-        color: rgba(255,255,255,.9);
+        color: whitesmoke;
         margin-bottom: 35px;
     }
 
@@ -704,8 +704,6 @@
 /*==================================================
     IMPROVE EXISTING SECTION HEADINGS
 ==================================================*/
-
-
 
 .section-sub {
     color: #6B7280;
