@@ -17,9 +17,40 @@
                 </span>
             </h1>
         </div>
-        <a asp-action="Create" class="tm-add-btn">
-            <i class="bi bi-plus-lg"></i> Add new player
-        </a>
+        <div class="tm-header-actions">
+            <button type="button"
+                    class="tm-clear-btn"
+                    onclick="openClearAllModal()"
+                    @(Model.Count == 0 ? "disabled" : "")>
+                <i class="bi bi-trash3"></i> Clear all players
+            </button>
+            <a asp-action="Create" class="tm-add-btn">
+                <i class="bi bi-plus-lg"></i> Add new player
+            </a>
+        </div>
+    </div>
+
+    <form id="clearAllForm" asp-controller="Player" asp-action="ClearAll" method="post" style="display:none;"></form>
+
+    <div id="clearAllOverlay" class="tm-modal-overlay">
+        <div class="tm-modal">
+            <div class="tm-modal-icon">
+                <i class="bi bi-exclamation-triangle-fill"></i>
+            </div>
+            <h3 class="tm-modal-title">Delete all players?</h3>
+            <p class="tm-modal-body">
+                This will permanently remove all <strong>@Model.Count</strong> players
+                from the database. This action cannot be undone.
+            </p>
+            <div class="tm-modal-actions">
+                <button type="button" class="tm-modal-cancel" onclick="closeClearAllModal()">
+                    Cancel
+                </button>
+                <button type="button" class="tm-modal-confirm" onclick="confirmClearAll()">
+                    <i class="bi bi-trash3"></i> Yes, delete all
+                </button>
+            </div>
+        </div>
     </div>
 
     @{
@@ -43,10 +74,6 @@
        class="tm-filter-btn @(current == "Goalkeeper" ? "active" : "")">Goalkeepers</a>
 </div>
 
-<span class="tm-count-badge">
-    <i class="bi bi-people-fill"></i> @Model.Count
-</span>
-
     <div class="tm-table-wrap">
         <table class="tm-table">
             <thead>
@@ -60,8 +87,12 @@
             <tbody>
                 @foreach (var player in Model)
                 {
-                    var initials = string.Concat(player.PlayerName.Split(' ')
-                                    .Take(2).Select(w => w[0])).ToUpper();
+                    var nameParts = (player.PlayerName ?? "")
+    .Split(' ', StringSplitOptions.RemoveEmptyEntries);
+
+var initials = nameParts.Length > 0
+    ? string.Concat(nameParts.Take(2).Select(w => w[0])).ToUpper()
+    : "?";
                     var posClass = player.Position?.ToLower() switch {
                         "forward"    => "pos-forward",
                         "midfielder" => "pos-midfielder",
@@ -74,7 +105,7 @@
                     <tr>
                         <td>
                            <div class="player-cell">
-                                <img src="@(string.IsNullOrEmpty(player.ImagePath) ? "/Images/Players/default.png" : player.ImagePath)"
+                                <img src="@(string.IsNullOrEmpty(player.ImagePath) ? "/Images/Players/default.webp" : player.ImagePath)"
                                      class="player-thumb" alt="@player.PlayerName" />
                                 <span class="player-name">@player.PlayerName</span>
                             </div>
@@ -111,4 +142,56 @@
     <div class="tm-footer">
         <span class="tm-count">Showing @Model.Count players</span>
     </div>
+
+    <div class="generator-cta">
+
+    <div class="generator-cta-content">
+
+        <div>
+            <span class="cta-badge">
+                ⚽ Team Generator
+            </span>
+
+            <h2>
+                Ready to Create Balanced Teams?
+            </h2>
+
+            <p>
+                Select players, choose the number of teams, and let TeamMaker
+                generate fair and balanced squads instantly.
+            </p>
+        </div>
+
+        <a asp-controller="Home"
+           asp-action="Index"
+           asp-fragment="team-generator"
+           class="btn-generator">
+
+            <i class="bi bi-shuffle"></i>
+
+            Generate Teams
+
+        </a>
+
+    </div>
+
+</div>
+<script>
+    function openClearAllModal() {
+        document.getElementById("clearAllOverlay").classList.add("show");
+    }
+
+    function closeClearAllModal() {
+        document.getElementById("clearAllOverlay").classList.remove("show");
+    }
+
+    function confirmClearAll() {
+        document.getElementById("clearAllForm").submit();
+    }
+
+    document.getElementById("clearAllOverlay").addEventListener("click", function (e) {
+        if (e.target === this) closeClearAllModal();
+    });
+</script>
+    
 </div>

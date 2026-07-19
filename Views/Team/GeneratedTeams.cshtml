@@ -2,298 +2,232 @@
 
 @{
     ViewData["Title"] = "Generated Teams";
+
     var activeTeams = Model.Where(t => t.Players.Any()).ToList();
+
     int totalPlayers = activeTeams.Sum(t => t.Players.Count);
-    int totalForwards = activeTeams.Sum(t => t.Players.Count(p => p.Position == "Forward"));
-    int totalGoalkeepers = activeTeams.Sum(t => t.Players.Count(p => p.Position == "Goalkeeper"));
-    string[] accentColors = { "green", "blue", "amber", "purple", "red" };
+
+    var teamNames = new[]
+    {
+        "Blue Team",
+        "Green Team",
+        "Red Team",
+        "Yellow Team"
+    };
+
+    var teamColors = new[]
+    {
+        "blue",
+        "green",
+        "red",
+        "yellow"
+    };
 }
 
 <link rel="stylesheet" href="~/css/generated-teams.css" />
 
-<div class="gt-page container">
+<div class="container generated-page py-4">
+
+    <div class="print-header">
+    <h1>TeamMaker</h1>
+    <p>Team Rosters — @DateTime.Now.ToString("MMMM d, yyyy")</p>
+</div>
 
     @if (!activeTeams.Any())
     {
-        <div class="empty-state">
-            <div class="empty-icon">
-                <i class="bi bi-people"></i>
-            </div>
-            <h2 class="empty-title">No teams generated yet</h2>
-            <p class="empty-body">Head to the home page to create balanced teams from your player pool.</p>
-            <a href="@Url.Action("Index", "Home")" class="btn-primary-lg">
-                <i class="bi bi-arrow-right-circle"></i> Generate teams
+        <div class="text-center mt-5">
+            <i class="bi bi-people display-1 text-secondary"></i>
+            <h2 class="mt-3">No Teams Generated</h2>
+            <p class="text-muted">Generate teams from the Home page.</p>
+            <a asp-controller="Home" asp-action="Index" class="btn btn-primary">
+                Generate Teams
             </a>
         </div>
     }
     else
     {
-        <div class="gt-header">
+        <!-- Header -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
             <div>
-                <div class="gt-eyebrow">Team generator</div>
-                <h1 class="gt-title">Generated teams</h1>
-                <p class="gt-subtitle">Last generated · @DateTime.Now.ToString("dddd, MMM d") at @DateTime.Now.ToString("h:mm tt")</p>
+                <h1 class="fw-bold">Generated Teams</h1>
+                <h2 class="text-muted mb-0">
+                    Drag players between teams. Changes save automatically.
+                </h2>
             </div>
-        </div>
-
-        <div class="stats-row">
-            <div class="stat-card">
-                <div class="stat-label">Total teams</div>
-                <div class="stat-value">@activeTeams.Count</div>
-                <div class="stat-sub">from pool of @totalPlayers</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-label">Players assigned</div>
-                <div class="stat-value">@totalPlayers</div>
-                <div class="stat-sub">@Math.Ceiling((double)totalPlayers / activeTeams.Count) avg per team</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-label">Forwards</div>
-                <div class="stat-value">@totalForwards</div>
-                <div class="stat-sub">across all teams</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-label">Goalkeepers</div>
-                <div class="stat-value">@totalGoalkeepers</div>
-                <div class="stat-sub">in squad</div>
-            </div>
-        </div>
-
-        <div class="toolbar">
-            <div class="toolbar-left">
-                <button id="shuffleTeamsBtn" class="btn-primary">
-                    <i class="bi bi-shuffle"></i> Shuffle teams
+            <div>
+                <button id="shuffleTeamsBtn" class="btn btn-primary">
+                    <i class="bi bi-shuffle"></i> Shuffle
                 </button>
-                <button class="btn-secondary" onclick="window.print()">
+                <button onclick="window.print()" class="btn btn-outline-dark ms-2">
                     <i class="bi bi-printer"></i> Print
                 </button>
             </div>
-            <a asp-controller="Player" asp-action="Index" class="btn-ghost">
-                <i class="bi bi-arrow-left"></i> Back to players
-            </a>
         </div>
 
-        <div class="drag-hint">
-            <i class="bi bi-info-circle"></i>
-            Drag players between teams to rebalance. Click <i class="bi bi-x-circle"></i> to remove a player.
+        <!-- Stats -->
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <h3 id="totalPlayers">@totalPlayers</h3>
+                        <small>Total Players</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <h3>@activeTeams.Count</h3>
+                        <small>Total Teams</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <h3>@(Math.Ceiling((double)totalPlayers / activeTeams.Count))</h3>
+                        <small>Average Players</small>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="teams-grid" id="teamsContainer">
+        <!-- Teams -->
+        <div class="row">
             @for (int i = 0; i < activeTeams.Count; i++)
             {
                 var team = activeTeams[i];
-                var accent = accentColors[i % accentColors.Length];
-                var badgeClass = $"badge-{accent}";
-                var fw = team.Players.Count(p => p.Position == "Forward");
-                var md = team.Players.Count(p => p.Position == "Midfielder");
-                var df = team.Players.Count(p => p.Position == "Defender");
-                var gk = team.Players.Count(p => p.Position == "Goalkeeper");
 
-                <div class="team-card @accent" id="team@(i + 1)Card">
-                    <div class="team-header">
-                        <span class="team-name">Team @(i + 1)</span>
-                        <span class="team-badge @badgeClass">@team.Players.Count players</span>
-                    </div>
+                var teamName = i < teamNames.Length
+                    ? teamNames[i]
+                    : $"Team {i + 1}";
 
-                    <div class="team-body">
-                        @foreach (var player in team.Players)
-                        {
-                            var posCode = player.Position switch {
-                                "Forward"    => "FW",
-                                "Midfielder" => "MF",
-                                "Defender"   => "DF",
-                                "Goalkeeper" => "GK",
-                                _            => "--"
-                            };
-                            var posClass = player.Position switch {
-                                "Forward"    => "pos-fw",
-                                "Midfielder" => "pos-md",
-                                "Defender"   => "pos-df",
-                                "Goalkeeper" => "pos-gk",
-                                _            => ""
-                            };
+                var color = i < teamColors.Length
+                    ? teamColors[i]
+                    : "blue";
 
-                            <div class="player-row"
-                                 data-player="@player.PlayerName"
-                                 data-pos="@posCode"
-                                 data-posclass="@posClass"
-                                 data-num="@player.Number">
-                                <div class="player-left">
-                                    <div class="p-num">@player.Number</div>
-                                    <span class="p-name">@player.PlayerName</span>
+                <div class="col-lg-6 mb-4">
+                    <div class="team-card">
+                        <div class="team-header team-@color">
+                            <h4>@teamName</h4>
+                            <span class="badge bg-light text-dark team-count">
+                                @team.Players.Count Players
+                            </span>
+                        </div>
+
+                        <div class="team-body drop-zone" data-team-id="@team.TeamId">
+                            @foreach (var player in team.Players)
+                            {
+                                var badge = player.Position switch
+                                {
+                                    "Forward" => "bg-warning",
+                                    "Midfielder" => "bg-primary",
+                                    "Defender" => "bg-success",
+                                    "Goalkeeper" => "bg-danger",
+                                    _ => "bg-secondary"
+                                };
+
+                                <div class="player-row" draggable="true" data-player-id="@player.PlayerId">
+                                    <div class="player-info">
+                                        <img src="@(string.IsNullOrEmpty(player.ImagePath)
+                                                ? Url.Content("~/Images/Players/default.webp")
+                                                : Url.Content(player.ImagePath))"
+                                             class="player-photo">
+                                        <div>
+                                            <strong>@player.PlayerName</strong>
+                                            <br>
+                                            <small>Jersey #@player.Number</small>
+                                        </div>
+                                    </div>
+
+                                    <span class="badge @badge">@player.Position</span>
                                 </div>
-                                <div class="player-right">
-                                    <span class="p-pos @posClass">@posCode</span>
-                                    <button class="btn-remove-player"
-                                            title="Remove from team"
-                                            onclick="removePlayer(this)">
-                                        <i class="bi bi-x-circle"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        }
-                    </div>
-
-                    <div class="team-footer">
-                        <span class="tf-stat"><span>@gk</span> GK</span>
-                        <span class="tf-stat"><span>@df</span> DF</span>
-                        <span class="tf-stat"><span>@md</span> MF</span>
-                        <span class="tf-stat"><span>@fw</span> FW</span>
+                            }
+                        </div>
                     </div>
                 </div>
             }
         </div>
-
-        <div class="footer-bar">
-            <div class="pos-legend">
-                <div class="leg-item"><div class="leg-dot pos-gk-dot"></div> Goalkeeper</div>
-                <div class="leg-item"><div class="leg-dot pos-df-dot"></div> Defender</div>
-                <div class="leg-item"><div class="leg-dot pos-md-dot"></div> Midfielder</div>
-                <div class="leg-item"><div class="leg-dot pos-fw-dot"></div> Forward</div>
-            </div>
-            <span class="footer-note">Drag players between cards to rebalance teams</span>
-        </div>
     }
+
 </div>
 
-@section Scripts {
+<div id="toast" class="toast-message"></div>
+
 <script>
-    let draggedRow = null;
 
-    function initDragDrop() {
-        document.querySelectorAll('.player-row').forEach(row => {
-            const clone = row.cloneNode(true);
-            row.parentNode.replaceChild(clone, row);
+    let draggedPlayer = null;
+
+    document.querySelectorAll(".player-row").forEach(item => {
+        item.addEventListener("dragstart", function () {
+            draggedPlayer = this;
+            this.classList.add("dragging");
         });
 
-        document.querySelectorAll('.player-row').forEach(row => {
-            row.setAttribute('draggable', 'true');
-
-            row.addEventListener('dragstart', e => {
-                draggedRow = row;
-                setTimeout(() => row.classList.add('dragging'), 0);
-                e.dataTransfer.effectAllowed = 'move';
-            });
-
-            row.addEventListener('dragend', () => {
-                document.querySelectorAll('.player-row')
-                        .forEach(r => r.classList.remove('dragging'));
-                document.querySelectorAll('.team-body')
-                        .forEach(b => b.classList.remove('drag-over'));
-                draggedRow = null;
-                updateAllFooters();
-            });
+        item.addEventListener("dragend", function () {
+            this.classList.remove("dragging");
         });
-
-        document.querySelectorAll('.team-body').forEach(body => {
-
-            const freshBody = body.cloneNode(true);
-            body.parentNode.replaceChild(freshBody, body);
-        });
-
-        document.querySelectorAll('.team-body').forEach(body => {
-            body.addEventListener('dragover', e => {
-                e.preventDefault();
-                e.dataTransfer.dropEffect = 'move';
-                body.classList.add('drag-over');
-            });
-
-            body.addEventListener('dragleave', e => {
-                if (!body.contains(e.relatedTarget))
-                    body.classList.remove('drag-over');
-            });
-
-            body.addEventListener('drop', e => {
-                e.preventDefault();
-                e.stopPropagation();
-                body.classList.remove('drag-over');
-
-                if (!draggedRow) return;
-                if (draggedRow.closest('.team-body') === body) return;
-                body.appendChild(draggedRow);
-                draggedRow = null;
-
-                updateAllFooters();
-                initDragDrop(); 
-            });
-        });
-
-        document.querySelectorAll('.btn-remove-player').forEach(btn => {
-            btn.addEventListener('click', function (e) {
-                e.stopPropagation();
-                const row = this.closest('.player-row');
-                const name = row.querySelector('.p-name')?.textContent?.trim() || 'this player';
-                if (confirm(`Remove ${name} from this team?`)) {
-                    row.remove();
-                    updateAllFooters();
-                }
-            });
-        });
-    }
-
-    function updateAllFooters() {
-        document.querySelectorAll('.team-card').forEach(card => {
-            const rows = card.querySelectorAll('.player-row');
-            let gk = 0, df = 0, md = 0, fw = 0;
-
-            rows.forEach(r => {
-                const pos = r.querySelector('.p-pos')?.textContent?.trim();
-                if (pos === 'GK') gk++;
-                else if (pos === 'DF') df++;
-                else if (pos === 'MF') md++;
-                else if (pos === 'FW') fw++;
-            });
-
-            const footer = card.querySelector('.team-footer');
-            if (footer) {
-                footer.innerHTML = `
-                    <span class="tf-stat"><span>${gk}</span> GK</span>
-                    <span class="tf-stat"><span>${df}</span> DF</span>
-                    <span class="tf-stat"><span>${md}</span> MF</span>
-                    <span class="tf-stat"><span>${fw}</span> FW</span>`;
-            }
-
-            const badge = card.querySelector('.team-badge');
-            if (badge) badge.textContent = `${rows.length} players`;
-        });
-    }
-
-    document.getElementById('shuffleTeamsBtn')?.addEventListener('click', function () {
-        const teamBodies = document.querySelectorAll('.team-body');
-        let allRows = [];
-
-        teamBodies.forEach(body => {
-            body.querySelectorAll('.player-row').forEach(r => allRows.push(r));
-        });
-
-        // Fisher-Yates shuffle
-        for (let i = allRows.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [allRows[i], allRows[j]] = [allRows[j], allRows[i]];
-        }
-
-        // Clear all team bodies first
-        teamBodies.forEach(body => body.innerHTML = '');
-
-        // Redistribute evenly
-        const teamCount = teamBodies.length;
-        const perTeam = Math.floor(allRows.length / teamCount);
-        let extra = allRows.length % teamCount;
-        let idx = 0;
-
-        teamBodies.forEach(body => {
-            const take = perTeam + (extra > 0 ? 1 : 0);
-            if (extra > 0) extra--;
-            for (let i = 0; i < take && idx < allRows.length; i++, idx++) {
-                body.appendChild(allRows[idx]);
-            }
-        });
-
-        initDragDrop();
-        updateAllFooters();
     });
 
-    // Boot on page load
-    initDragDrop();
-</script>
+    document.querySelectorAll(".drop-zone").forEach(zone => {
+        zone.addEventListener("dragover", function (e) {
+            e.preventDefault();
+        });
+
+        zone.addEventListener("drop", function (e) {
+            e.preventDefault();
+            if (draggedPlayer) {
+                this.appendChild(draggedPlayer);
+            }
+        });
+    });
+
+
+document.getElementById("shuffleTeamsBtn")?.addEventListener("click", function () {
+    shuffleTeams();
+});
+
+function shuffleTeams() {
+    const dropZones = Array.from(document.querySelectorAll(".drop-zone"));
+    if (dropZones.length === 0) return;
+
+
+    const allPlayers = [];
+    dropZones.forEach(zone => {
+        Array.from(zone.children).forEach(row => allPlayers.push(row));
+    });
+
+
+    for (let i = allPlayers.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [allPlayers[i], allPlayers[j]] = [allPlayers[j], allPlayers[i]];
+    }
+
+    dropZones.forEach(zone => {
+        zone.innerHTML = "";
+    });
+
+  
+    allPlayers.forEach((row, index) => {
+        const zone = dropZones[index % dropZones.length];
+        zone.appendChild(row);
+    });
+
+    document.querySelectorAll(".player-row").forEach(item => {
+        item.addEventListener("dragstart", function () {
+            draggedPlayer = this;
+            this.classList.add("dragging");
+        });
+        item.addEventListener("dragend", function () {
+            this.classList.remove("dragging");
+        });
+    });
+
+ 
+    dropZones.forEach(zone => {
+        const count = zone.children.length;
+        const badge = zone.closest(".team-card")?.querySelector(".team-count");
+        if (badge) badge.textContent = `${count} Players`;
+    });
 }
+</script>

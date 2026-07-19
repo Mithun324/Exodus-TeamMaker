@@ -173,6 +173,17 @@ namespace TeamMaker_WebApp.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ClearAll()
+        {
+            var allPlayers = await _context.Players.ToListAsync();
+            _context.Players.RemoveRange(allPlayers);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+        }
+
         // =======================
         // Helper Methods
         // =======================
@@ -249,5 +260,6 @@ namespace TeamMaker_WebApp.Controllers
 
             }
         }
+
     }
     }

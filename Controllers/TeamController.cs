@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using TeamMaker_WebApp.Data;
 using TeamMaker_WebApp.Models;
+using TeamMaker_WebApp.ViewModels;
 
 namespace TeamMaker_WebApp.Controllers
 {
@@ -131,5 +132,33 @@ namespace TeamMaker_WebApp.Controllers
 
             return View(teams);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> MovePlayer([FromBody] MovePlayerViewModel model)
+        {
+            if (model == null)
+                return BadRequest();
+
+            var player = await _context.Players.FindAsync(model.PlayerId);
+
+            if (player == null)
+                return NotFound();
+
+            var team = await _context.Teams.FindAsync(model.TeamId);
+
+            if (team == null)
+                return NotFound();
+
+            player.TeamId = model.TeamId;
+
+            await _context.SaveChangesAsync();
+
+            return Ok(new
+            {
+                success = true,
+                message = "Player moved successfully."
+            });
+        }
+
     }
 }
